@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { CatCardComponent } from './cat-card/cat-card.component';
 import { SearchComponent } from './search/search.component';
 import { CatBioComponent } from './cat-bio/cat-bio.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CatBioComponent } from './cat-bio/cat-bio.component';
     HeaderComponent,
     CatCardComponent,
     SearchComponent,
-    CatBioComponent
+    CatBioComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

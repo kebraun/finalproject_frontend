@@ -1,2 +1,4 @@
 <p>search works</p>
-<cat-card></cat-card>
+<ul>
+  <app-cat-card *ngFor="let cat of cats" [catRef]="cat"> </app-cat-card>
+</ul>

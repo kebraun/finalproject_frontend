@@ -1,5 +1,5 @@
 import { CatDetailsService } from './../cat-details.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cat-card',
@@ -7,15 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cat-card.component.css'],
 })
 export class CatCardComponent implements OnInit {
-  cat: any;
+  @Input() catRef: any; //Cat interface?
+  constructor() {}
 
-  constructor(private catServ: CatDetailsService) {}
-
-  ngOnInit(): void {
-    this.getCats();
-  }
-
-  getCats = () => {
-    this.cat = this.catServ.getCats();
-  };
+  ngOnInit(): void {}
 }

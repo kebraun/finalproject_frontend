@@ -4,11 +4,13 @@ import { SearchComponent } from './search/search.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { QuizComponent } from './quiz/quiz.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'search', component: SearchComponent },
   { path: 'cat-bio', component: CatBioComponent },
+  { path: 'quiz', component: QuizComponent },
   { path: 'not-found', component: NotFoundComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },

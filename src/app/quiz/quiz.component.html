@@ -1,0 +1,16 @@
+<form #quizForm="ngForm" (ngSubmit)="getCatBreedDetails(quizForm)">
+  <fieldset>
+    <legend>How playful is your ideal cat</legend>
+    <input type="radio" id="1" name="playfulness" value="1" ngModel />
+    <label for="1">Not at all</label>
+    <input type="radio" id="2" name="playfulness" value="2" ngModel />
+    <label for="2">a little</label>
+    <input type="radio" id="3" name="playfulness" value="3" ngModel />
+    <label for="3">moderately</label>
+    <input type="radio" id="4" name="playfulness" value="4" ngModel />
+    <label for="4">more than moderately</label>
+    <input type="radio" id="5" name="playfulness" value="5" ngModel />
+    <label for="5">Very</label>
+  </fieldset>
+  <button>Submit</button>
+</form>

@@ -16,8 +16,7 @@ export class HomeComponent implements OnInit {
   cats: any;
   ngOnInit(): void {
     // this.getCats();
-
-    this.getCatBreedDetails();
+    // this.getCatBreedDetails();
   }
 
   //   getCats = () => {
@@ -32,15 +31,15 @@ export class HomeComponent implements OnInit {
   //     );
   //   };
 
-  getCatBreedDetails = () => {
-    this.breedService.getCatBreedDetails().subscribe(
-      (response) => {
-        console.log('Breed stuff yo', response);
-        this.catBreeds = response;
-      },
-      (error) => {
-        console.log(error.message);
-      }
-    );
-  };
+  // getCatBreedDetails = () => {
+  //   this.breedService.getCatBreedDetails().subscribe(
+  //     (response) => {
+  //       console.log('Breed stuff yo', response);
+  //       this.catBreeds = response;
+  //     },
+  //     (error) => {
+  //       console.log(error.message);
+  //     }
+  //   );
+  // };
 }

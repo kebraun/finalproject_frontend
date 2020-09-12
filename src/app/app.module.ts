@@ -11,6 +11,8 @@ import { CatBioComponent } from './cat-bio/cat-bio.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { FormsModule } from '@angular/forms';
+import { AboutComponent } from './about/about.component';
+import { UserInfoComponent } from './user-info/user-info.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { FormsModule } from '@angular/forms';
     CatBioComponent,
     NotFoundComponent,
     QuizComponent,
+    AboutComponent,
+    UserInfoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

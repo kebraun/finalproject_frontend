@@ -31,11 +31,31 @@ export class QuizComponent implements OnInit {
     );
   };
 
+  getSelectedOptions = (options: any) => {
+    let selectedOptions: number[] = [];
+    for (const [key, value] of Object.entries(options)) {
+      // console.log(`${key}: ${value}`);
+      if (value) {
+        console.log(`pushed ${key}: ${value}`);
+        selectedOptions.push(parseInt(key));
+      }
+    }
+    return selectedOptions;
+  };
   getCatBreedDetails = (quizForm: NgForm) => {
     let playLevel = parseInt(quizForm.value.playfulness);
+    let vocalLevel = parseInt(quizForm.value.vocal);
+    let shedLevelArr: number[] = this.getSelectedOptions(
+      quizForm.value.shedding
+    );
+    console.log('shed level', shedLevelArr);
     // console.log(this.catBreeds[0]); //show first breed
     let filteredBreeds = this.catBreeds.filter((breed) => {
-      return breed.energy_level === playLevel;
+      return (
+        breed.energy_level === playLevel &&
+        breed.vocalisation === vocalLevel &&
+        shedLevelArr.includes(breed.shedding_level)
+      );
     });
     console.log(filteredBreeds);
   };

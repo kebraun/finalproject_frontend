@@ -1,3 +1,4 @@
+import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CatBioComponent } from './cat-bio/cat-bio.component';
 import { SearchComponent } from './search/search.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'cat-bio', component: CatBioComponent },
   { path: 'quiz', component: QuizComponent },
   { path: 'not-found', component: NotFoundComponent },
+  { path: 'about', component: AboutComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },
 ];

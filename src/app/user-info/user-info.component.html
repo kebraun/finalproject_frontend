@@ -1,1 +1,7 @@
-<p>user-info works!</p>
+<form #visitorForm="ngForm" (ngSubmit)="addUser(visitorForm)">
+	<label for="email">Email</label>
+	<input type="email" name="email" id="email" ngModel />
+	<label for="password">Passord</label>
+	<input type="password" name="password" id="password" ngModel />
+	<button>Submit</button>
+</form>

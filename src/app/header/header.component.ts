@@ -7,13 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   constructor() {}
-
   ngOnInit(): void {}
 
   showNav = () => {
     let x = document.getElementById('nav');
     if (x.className === 'navbar-links') {
-      x.className += ' responsive';
+      x.className += 'responsive';
+    } else {
+      x.className = 'navbar-links';
+    }
+  };
+
+  hideNav = () => {
+    let x = document.getElementById('nav');
+    if (x.className === 'navbar-links') {
+      x.classList.remove('reponsive');
     } else {
       x.className = 'navbar-links';
     }

@@ -1,26 +1,16 @@
-<!-- <nav>
-  <div class="logo">
-    <h1><a routerLink="/home">It's cats!</a></h1>
+<nav class="navbar">
+  <a routerLink="/home" class="title">It's Cats!</a>
+  <a class="toggle-button" (click)="showNav()">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </a>
+  <div class="navbar-links" id="nav">
+    <ul>
+      <li><a routerLink="/search">search cats</a></li>
+      <li><a routerLink="/quiz">get paired</a></li>
+      <li><a href="#">favorite cats</a></li>
+      <li><a routerLink="/about">about</a></li>
+    </ul>
   </div>
-  <ul class="nav-links">
-    <div class="container">
-      <li>
-        <a href="#">search cats<span class="fas fa-angle-right"></span></a>
-      </li>
-      <li>
-        <a href="#">get paired<span class="fas fa-angle-right"></span></a>
-      </li>
-      <li>
-        <a href="#">favorite cats<span class="fas fa-angle-right"></span></a>
-      </li>
-      <li>
-        <a href="#">about<span class="fas fa-angle-right"></span></a>
-      </li>
-    </div>
-  </ul>
-  <div class="burger">
-    <div class="line1"></div>
-    <div class="line2"></div>
-    <div class="line3"></div>
-  </div>
-</nav> -->
+</nav>

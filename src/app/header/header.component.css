@@ -1,80 +1,95 @@
-/* * {
-  margin: 0px;
-  padding: 0px;
+* {
   box-sizing: border-box;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: whitesmoke;
-  padding: 20px;
-}
-
-.nav-links {
-  position: absolute;
-  right: 0px;
-  height: 100vh;
-  top: 0px;
-  background-color: whitesmoke;
+.navbar {
   display: flex;
   flex-direction: column;
+  background-color: #e4883e;
+  color: #fcfcf2;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-decoration: none;
+  color: #fcfcf2;
+}
+
+.navbar-links {
+  display: none;
   align-items: center;
-  justify-content: center;
+}
+
+.navbar-links ul {
   width: 100%;
-  transform: translateX(100%);
-  transition: transform 0.5s ease-in;
 }
 
-.container {
-  position: absolute;
-  left: 50px;
-  top: 100px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  padding: 20px;
-  color: rgb(94, 94, 94);
-}
-
-.nav-links li {
+.navbar-links li {
   list-style: none;
-  font-size: 30px;
-  padding: 20px;
+  text-align: center;
 }
 
-.fas {
-  font-size: 20px;
-  color: rgb(94, 94, 94);
-  margin-left: 10px;
-}
-
-.logo {
-  font-size: 25px;
-}
-
-.logo a {
+.navbar-links li a {
   text-decoration: none;
-  color: rgb(94, 94, 94);
-  font-weight: 300;
+  color: #fcfcf2;
+  padding: 1rem 1rem;
+  display: block;
+  width: 100%;
 }
 
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: rgb(94, 94, 94);
-  margin: 5px;
+.navbar-links li:hover {
+  background-color: #997750;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 1.25rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
   cursor: pointer;
 }
 
-.burger {
-  padding: 10px;
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fcfcf2;
+  border-radius: 10px;
+}
+
+.navbar-links.active {
+  display: flex;
+}
+
+.responsive {
+  display: flex;
 }
 
 @media only screen and (min-width: 768px) {
-  .burger {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-links {
+    display: flex;
+  }
+
+  .navbar-links ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar-links li:hover {
+    background-color: #e4883e;
+  }
+
+  .toggle-button {
     display: none;
   }
-} */
+}

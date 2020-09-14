@@ -1,1 +1,15 @@
-<p>cat-bio works!</p>
+<section>
+  <p>{{ catBio.name }}</p>
+  <p>{{ catBio.age }}</p>
+  <p>{{ catBio.gender }}</p>
+  <!-- <p>{{ catBio.environment }}</p> -->
+  <p>{{ catBio.description }}</p>
+  <p>CAT FRIENDLY: {{ catBio.environment["cats"] }}</p>
+  <p>DOG FRIENDLY:{{ catBio.environment["dogs"] }}</p>
+  <p>FRIENDLY WITH CHILDREN:{{ catBio.environment["children"] }}</p>
+  <p>{{ catBio.attributes }}</p>
+  <p>{{ catBio.colors["primary"] }}</p>
+  <p>{{ catBio.contact }}</p>
+</section>
+
+<!-- <div [showTheBio]="catRef"></div> -->

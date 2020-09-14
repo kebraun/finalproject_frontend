@@ -1,9 +1,8 @@
-<li>
+<li class="cat-card-info">
   <p>{{ catRef.name }}</p>
+  <img src="{{ catRef.photos[0]?.medium }}" alt="{{ catRef.name }}" />
   <p>{{ catRef.breeds.primary }}</p>
   <p>{{ catRef.age }}</p>
   <p>{{ catRef.gender }}</p>
-  <!-- <img src="{{ catRef.photos[0] }}" alt="{{ catRef.name }}" /> -->
-  <!-- <p>{{ catRef.photos. }}</p> -->
-  <!-- ??????? -->
+  <button (click)="showCatBio(catRef.id)">More</button>
 </li>

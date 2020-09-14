@@ -1,3 +1,9 @@
 <ul>
-  <app-cat-card *ngFor="let cat of cats" [catRef]="cat"> </app-cat-card>
+  <section class="breed-section" *ngFor="let item of breedCatsArray">
+    {{ item.breed }}
+    <!-- {{ item.catsArray }} -->
+    <div *ngFor="let cat of item.catsArray">
+      <app-cat-card [catRef]="cat"> </app-cat-card>
+    </div>
+  </section>
 </ul>

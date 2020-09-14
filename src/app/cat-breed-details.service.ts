@@ -8,6 +8,9 @@ export class CatBreedDetailsService {
   url: string = `https://api.thecatapi.com/v1/breeds`;
   // `https://api.thecatapi.com/v1/breeds?energy_level=5`
 
+  filteredBreeds: any = [];
+  breedsToSearch: any = [];
+
   constructor(private http: HttpClient) {}
 
   getCatBreedDetails = () => {
@@ -19,5 +22,22 @@ export class CatBreedDetailsService {
     };
 
     return this.http.get(this.url, httpOptions);
+  };
+
+  setFilteredBreeds = (filteredBreeds) => {
+    //add type
+    this.filteredBreeds = filteredBreeds;
+  };
+
+  getFilteredBreeds = () => {
+    return this.filteredBreeds;
+  };
+
+  setBreedsToSearch = (breedsToSearch: string[]) => {
+    this.breedsToSearch = breedsToSearch;
+  };
+
+  getBreedsToSearch = () => {
+    return this.breedsToSearch;
   };
 }

@@ -13,6 +13,7 @@ import { QuizComponent } from './quiz/quiz.component';
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { UserInfoComponent } from './user-info/user-info.component';
+import { BreedResultComponent } from './breed-result/breed-result.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { UserInfoComponent } from './user-info/user-info.component';
     QuizComponent,
     AboutComponent,
     UserInfoComponent,
+    BreedResultComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

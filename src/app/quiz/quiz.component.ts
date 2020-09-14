@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CatBreedDetailsService } from '../cat-breed-details.service';
 
 @Component({
@@ -8,8 +9,14 @@ import { CatBreedDetailsService } from '../cat-breed-details.service';
   styleUrls: ['./quiz.component.css'],
 })
 export class QuizComponent implements OnInit {
+  // @Output() submit = new EventEmitter<any>();
+
   catBreeds: any = [];
-  constructor(private catBreedService: CatBreedDetailsService) {}
+
+  constructor(
+    private catBreedService: CatBreedDetailsService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.catBreeds = this.getAllBreeds();
@@ -58,5 +65,7 @@ export class QuizComponent implements OnInit {
       );
     });
     console.log(filteredBreeds);
+    this.catBreedService.setFilteredBreeds(filteredBreeds);
+    this.router.navigate(['breed-result']);
   };
 }

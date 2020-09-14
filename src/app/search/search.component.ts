@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CatBreedDetailsService } from '../cat-breed-details.service';
 import { CatDetailsService } from '../cat-details.service';
 
 @Component({
@@ -8,10 +10,17 @@ import { CatDetailsService } from '../cat-details.service';
 })
 export class SearchComponent implements OnInit {
   cats; //interface later?
-  constructor(private catServ: CatDetailsService) {}
+  breedsToSearch: string[] = [];
+  constructor(
+    private catServ: CatDetailsService,
+    private breedServ: CatBreedDetailsService,
+    private route: ActivatedRoute
+  ) {} //pulls from petfinder API
 
   ngOnInit(): void {
-    this.getCats();
+    // this.getCats();
+    this.breedsToSearch = this.breedServ.getBreedsToSearch();
+    this.getCatsForBreed();
   }
 
   getCats = () => {
@@ -24,5 +33,20 @@ export class SearchComponent implements OnInit {
         console.log(error.message);
       }
     );
+  };
+
+  getCatsForBreed = () => {
+    this.breedsToSearch.forEach((breed) => {
+      console.log(breed);
+      this.catServ.getCatsForBreed(breed).subscribe(
+        (response) => {
+          console.log('cats for the breed', response);
+          // this.cats = response;
+        },
+        (error) => {
+          console.log(error.message);
+        }
+      );
+    });
   };
 }

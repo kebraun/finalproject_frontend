@@ -1,0 +1,19 @@
+<!-- cat breed name -->
+<!-- cat breed image -->
+<!-- cat breed description -->
+<form #breedForm="ngForm" (ngSubmit)="setBreedsToSearch(breedForm)">
+  <fieldset ngModelGroup="breeds">
+    <legend>Breeds matching your criteria</legend>
+    <div *ngFor="let breed of filteredBreeds">
+      <input
+        type="checkbox"
+        id="{{ breed.name }}"
+        name="{{ breed.name }}"
+        ngModel
+      />
+      <label for="{{ breed.name }}">{{ breed.name }}</label>
+      <p>{{ breed.description }}</p>
+    </div>
+  </fieldset>
+  <button>Go find one!</button>
+</form>

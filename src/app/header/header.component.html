@@ -7,10 +7,14 @@
   </a>
   <div class="navbar-links" id="nav">
     <ul>
-      <li><a routerLink="/search">search cats</a></li>
-      <li><a routerLink="/quiz">get paired</a></li>
-      <li><a href="#">favorite cats</a></li>
-      <li><a routerLink="/about">about</a></li>
+      <li class="link">
+        <a routerLink="/search" (click)="hideNav()">search cats</a>
+      </li>
+      <li class="link">
+        <a routerLink="/quiz" (click)="hideNav()">get paired</a>
+      </li>
+      <li class="link"><a href="#" (click)="hideNav()">favorite cats</a></li>
+      <li class="link"><a routerLink="/about" (click)="hideNav()">about</a></li>
     </ul>
   </div>
 </nav>

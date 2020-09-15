@@ -7,12 +7,13 @@ import { Visitor } from "./interfaces/visitor";
 })
 export class VisitorService {
 	url: string = `http://localhost:3000`;
-	currentVisitor: Visitor;
+	currentVisitor: Visitor = null;
+	favoriteCats: number[] = [];
 
 	constructor(private http: HttpClient) {}
 
 	addNewVisitor = (visitorInfo: Visitor) => {
-		this.http.post(`${this.url}/visitors`, visitorInfo).subscribe(
+		this.http.post<Visitor>(`${this.url}/visitors`, visitorInfo).subscribe(
 			(response) => {
 				this.currentVisitor = <Visitor>response;
 				console.log("In service: addNewVisitor() : ", this.currentVisitor);
@@ -21,6 +22,9 @@ export class VisitorService {
 				console.log("Error has occurred", error.message);
 			}
 		);
+	};
+
+	getRecentVisitor = () => {
 		return this.currentVisitor;
 	};
 

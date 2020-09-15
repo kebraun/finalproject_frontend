@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.button {
+  background-color: #eee8da;
+  color: #543b39;
+  border: none;
+  font-size: 30px;
+  padding: 30px;
+  width: 100%;
+  cursor: pointer;
+}

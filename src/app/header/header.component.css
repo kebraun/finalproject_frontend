@@ -1,8 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
 .navbar {
   display: flex;
   flex-direction: column;
   background-color: #e4883e;
   color: #fcfcf2;
+  padding: 0 30px;
 }
 
 .title {
@@ -29,15 +38,7 @@
 .link {
   text-decoration: none;
   color: #fcfcf2;
-  padding: 1rem 1rem;
-  display: block;
-  width: 100%;
-}
-
-.link a {
-  text-decoration: none;
-  color: #fcfcf2;
-  padding: 1rem 1rem;
+  padding: 20px;
   display: block;
   width: 100%;
 }
@@ -46,23 +47,15 @@
   background-color: #997750;
 }
 
-.toggle-button {
+.fa-bars {
   position: absolute;
-  top: 1.25rem;
-  right: 1rem;
+  top: 16px;
+  right: 46px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 21px;
+  font-size: 30px;
   cursor: pointer;
-}
-
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: #fcfcf2;
-  border-radius: 10px;
 }
 
 .navbar-links.active {
@@ -93,7 +86,7 @@
     background-color: #e4883e;
   }
 
-  .toggle-button {
+  .fa-bars {
     display: none;
   }
 }

@@ -1,20 +1,15 @@
 <nav class="navbar">
   <a routerLink="/home" class="title">It's Cats!</a>
-  <a class="toggle-button" (click)="showNav()">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </a>
+  <!-- <a class="toggle-button" "> -->
+  <span class="fas fa-bars" (click)="showNav()"></span>
+  <!-- </a> -->
   <div class="navbar-links" id="nav">
     <ul>
-      <li class="link">
-        <a routerLink="/search" (click)="hideNav()">search cats</a>
+      <li>
+        <a routerLink="/quiz" class="link" (click)="hideNav()">get paired</a>
       </li>
-      <li class="link">
-        <a routerLink="/quiz" (click)="hideNav()">get paired</a>
-      </li>
-      <li class="link"><a href="#" (click)="hideNav()">favorite cats</a></li>
-      <li class="link"><a routerLink="/about" (click)="hideNav()">about</a></li>
+      <li><a href="#" class="link" (click)="hideNav()">favorite cats</a></li>
+      <li><a routerLink="/about" class="link" (click)="hideNav()">about</a></li>
     </ul>
   </div>
 </nav>

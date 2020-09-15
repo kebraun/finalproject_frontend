@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { BreedResultComponent } from './breed-result/breed-result.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { BreedResultComponent } from './breed-result/breed-result.component';
     AboutComponent,
     UserInfoComponent,
     BreedResultComponent,
+    FavoritesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

@@ -1,0 +1,72 @@
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.quizForm {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+}
+.inputContainer {
+	display: flex;
+
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.questionDiv {
+	margin: 10px;
+	padding: 10px;
+
+	width: 250px;
+	height: 250px;
+	border: 3px solid #543b39;
+	border-radius: 10px;
+	background-color: #fcfcf2;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.quizInstruction {
+	color: #997750;
+	font-size: 28px;
+}
+
+.qContainer {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.option {
+	display: flex;
+	font-size: 20px;
+}
+
+.legend {
+	font-size: 25px;
+}
+
+.optionLabel:hover {
+	color: #e4883e;
+}
+
+@media screen and (min-width: 768px) {
+	.main {
+		justify-content: center;
+	}
+	.quizForm {
+		width: 1040px;
+	}
+
+	.questionDiv {
+		width: 225px;
+		height: 225px;
+	}
+}

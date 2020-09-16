@@ -10,3 +10,14 @@ body {
   font-family: "Nunito", sans-serif;
   background-color: #fcfcf2;
 }
+
+.button {
+  background-color: #997750;
+  color: #fcfcf2;
+  border: none;
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 30px;
+  margin: 20px 0;
+  cursor: pointer;
+}

@@ -1,11 +1,36 @@
-<li class="cat-card-info">
-	<p>
-		{{ catRef.name }} <button (click)="addToFavorites(catRef.id)">+</button>
-		<button (click)="delete()">-</button>
-	</p>
-	<img src="{{ catRef.photos[0]?.medium }}" alt="{{ catRef.name }}" />
-	<p>{{ catRef.breeds.primary }}</p>
-	<p>{{ catRef.age }}</p>
-	<p>{{ catRef.gender }}</p>
-	<button (click)="showCatBio(catRef.id)">More</button>
-</li>
+<!-- <li class="cat-card-info">
+  <p>
+    {{ catRef.name }} <button (click)="addToFavorites(catRef.id)">+</button>
+    <button (click)="delete()">-</button>
+  </p>
+  <img
+    src="{{ catRef.primary_photo_cropped?.small }}"
+    alt="{{ catRef.name }}"
+  />
+  <p>{{ catRef.breeds.primary }}</p>
+  <p>{{ catRef.age }}</p>
+  <p>{{ catRef.gender }}</p>
+  
+</li> -->
+
+<div class="container">
+  <li class="cat-card-info">
+    <img
+      src="{{ catRef.primary_photo_cropped?.small }}"
+      alt="{{ catRef.name }}"
+      class="img"
+    />
+    <div class="info">
+      <p class="name">{{ catRef.name }}</p>
+      <div class="buttons">
+        <button class="hide">
+          <i class="fas fa-heart" (click)="addToFavorites(catRef.id)"></i>
+        </button>
+        <button class="more" (click)="showCatBio(catRef.id)">More</button>
+        <!-- <button class="hide">
+          <i class="far fa-minus-square" (click)="delete()"></i>
+        </button> -->
+      </div>
+    </div>
+  </li>
+</div>

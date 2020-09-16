@@ -1,8 +1,9 @@
 <ul>
   <section class="breed-section" *ngFor="let item of breedCatsArray">
-    {{ item.breed }}
-    <!-- {{ item.catsArray }} -->
-    <div *ngFor="let cat of item.catsArray">
+    <div>
+      <p class="breed-name">{{ item.breed }}</p>
+    </div>
+    <div class="breed-slide" *ngFor="let cat of item.catsArray">
       <app-cat-card [catRef]="cat"> </app-cat-card>
     </div>
   </section>

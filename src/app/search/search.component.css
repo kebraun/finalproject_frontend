@@ -1,3 +1,18 @@
 .breed-section {
   display: flex;
+  overflow-x: scroll;
+  padding: 30px;
+  margin: 50px 0;
+  position: relative;
+  background-color: #eee8da;
+}
+
+.breed-name {
+  position: absolute;
+  top: 3px;
+  left: 60px;
+  font-size: 26px;
+  background-color: #e4883e;
+  padding: 3px;
+  border-radius: 10px 10px 0 0;
 }

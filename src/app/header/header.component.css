@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+.spacer {
+  height: 80px;
+  width: 100%;
+}
+
 li {
   list-style: none;
 }
@@ -12,13 +17,16 @@ li {
   background-color: #e4883e;
   color: #fcfcf2;
   padding: 0 30px;
+  position: absolute; /* THIS BOY */
+  width: 100%;
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin: 1rem;
   text-decoration: none;
   color: #fcfcf2;
+  font-family: "Dancing Script", cursive;
 }
 
 .navbar-links {
@@ -41,6 +49,7 @@ li {
   padding: 20px;
   display: block;
   width: 100%;
+  font-size: 25px;
 }
 
 .navbar-links li:hover {
@@ -49,12 +58,12 @@ li {
 
 .fa-bars {
   position: absolute;
-  top: 16px;
+  top: 20px;
   right: 46px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 30px;
+  font-size: 40px;
   cursor: pointer;
 }
 
@@ -67,10 +76,15 @@ li {
 }
 
 @media only screen and (min-width: 768px) {
+  .spacer {
+    height: 10vh;
+    width: 100%;
+  }
   .navbar {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    height: 10vh;
   }
 
   .navbar-links {
@@ -84,6 +98,10 @@ li {
 
   .navbar-links li:hover {
     background-color: #e4883e;
+  }
+
+  .link {
+    font-size: 1rem;
   }
 
   .fa-bars {

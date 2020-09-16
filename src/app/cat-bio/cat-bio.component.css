@@ -1,0 +1,202 @@
+.main {
+	display: flex;
+
+	height: 100%vh;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(238, 232, 218, 1);
+	border: 1px solid black;
+	border-radius: 10px;
+}
+.breed-color-age {
+	font-size: 18px;
+}
+.br-c-age {
+	margin: 3px;
+}
+
+.genderNname {
+	display: flex;
+	width: 50%;
+	justify-content: flex-start;
+	align-items: center;
+}
+.catPic {
+	width: 356px;
+	height: 359px;
+	border-radius: 10px;
+}
+
+.img {
+	justify-items: center;
+	margin-right: 5px;
+	padding: 5px;
+}
+.desc {
+	padding: 30px;
+	margin-right: 5px;
+	border: 1px solid black;
+	border-radius: 10px;
+	justify-items: center;
+	font-size: 20px;
+}
+.contactsContainer {
+	padding: 30px;
+}
+.contacts {
+	margin: 5px;
+}
+
+.name {
+	font-size: 35px;
+	font-weight: bolder;
+	height: 40px;
+}
+.gender {
+	padding-bottom: 10px;
+	padding-right: 25px;
+	display: flex;
+	align-items: stretch;
+}
+
+.env_attr {
+	padding: 5px;
+}
+
+.goodWithContainer {
+	flex: 1;
+	padding: 10px;
+	margin-right: 20px;
+}
+
+.attributesContainer {
+	flex: 1;
+	padding: 10px;
+}
+
+.check {
+	height: 30px;
+	width: 35px;
+}
+
+.fontcolor {
+	color: rgba(228, 136, 62, 1);
+}
+
+/* Icons  */
+
+#Icon_ionic-md-female #Icon_ionic-md-male {
+	fill: rgba(84, 59, 57, 1);
+}
+.Icon_ionic-md-female,
+.Icon_ionic-md-male {
+	overflow: visible;
+	position: relative;
+	width: 25px;
+	height: 35px;
+	left: 0px;
+	top: 10px;
+	transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+#Icon_email {
+	fill: rgba(84, 59, 57, 1);
+}
+.Icon_email {
+	overflow: visible;
+	position: relative;
+	width: 21px;
+	height: 18px;
+	transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Icon_local-phone {
+	fill: rgba(84, 59, 57, 1);
+}
+.Icon_local-phone {
+	overflow: visible;
+	position: relative;
+	width: 23px;
+	height: 23px;
+
+	transform: matrix(1, 0, 0, 1, 0, 0);
+}
+#Icon_metro-link {
+	fill: rgba(84, 59, 57, 1);
+}
+.Icon_metro-link {
+	overflow: visible;
+	position: relative;
+	width: 27px;
+	height: 27px;
+	transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* Callout styles */
+
+.callouts {
+	list-style-type: none;
+}
+li + li {
+	margin-left: 4%;
+}
+.callouts li {
+	display: inline-block;
+	position: relative;
+	width: 18%;
+	height: 100px;
+	padding: 15px;
+	background-color: white;
+	border: 3px solid #c1c1c1;
+	border-radius: 40px;
+	box-shadow: 0 0 10px grey;
+}
+
+.callouts--right:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: -40px;
+	top: 17px;
+	border: 10px solid transparent;
+	border-left: 32px solid rgb(193, 193, 193); /* IE8 Fallback */
+	border-left: 32px solid rgba(193, 193, 193, 0.5);
+	z-index: 2;
+}
+.callouts--right:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: -30px;
+	top: 20px;
+	border: 8px solid transparent;
+	border-left: 24px solid #fff;
+	z-index: 3;
+}
+@media screen and (min-width: 768px) {
+	.main {
+		margin: 20px;
+	}
+	.horizontal {
+		display: flex;
+
+		padding: 5px;
+	}
+	.img {
+		flex: 2;
+	}
+	.desc {
+		flex: 1;
+		font-size: 30px;
+	}
+	.contactsContainer {
+		flex: 1;
+	}
+
+	.env_attr {
+		display: flex;
+	}
+}

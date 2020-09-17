@@ -6,7 +6,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class CatDetailsService {
 	url: string = `http://localhost:3000/petfinder`;
-	favoriteCats: any = [];
+	favoriteCats: number[] = [];
 	constructor(private http: HttpClient) {}
 
 	getCats = () => {

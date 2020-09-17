@@ -12,6 +12,8 @@ export class FavoritesComponent implements OnInit {
 	@Input() deleted: Cat;
 	favoriteCatIds: number[] = []; // array of favorite cat ids
 	favCats: Cat[] = []; // array of cat objects
+	page = "favorites";
+
 	constructor(private cService: CatDetailsService) {}
 
 	ngOnInit(): void {

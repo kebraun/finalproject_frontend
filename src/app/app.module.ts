@@ -15,6 +15,7 @@ import { AboutComponent } from './about/about.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { BreedResultComponent } from './breed-result/breed-result.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FavoritesComponent } from './favorites/favorites.component';
     UserInfoComponent,
     BreedResultComponent,
     FavoritesComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

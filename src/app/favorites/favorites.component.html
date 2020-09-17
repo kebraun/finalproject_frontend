@@ -1,7 +1,19 @@
-<section>
-	<ul>
-		<li *ngFor="let cat of favCats; index as i">
-			<app-cat-card [catRef]="cat" [pageRef]="page" (deleted)="delete(i)"></app-cat-card>
-		</li>
-	</ul>
+<h1 class="header">Favorites</h1>
+
+<section class="section">
+  <ul>
+    <li *ngFor="let cat of favCats; index as i">
+      <app-cat-card
+        [catRef]="cat"
+        [pageRef]="page"
+        (deleted)="delete(i)"
+      ></app-cat-card>
+    </li>
+  </ul>
+  <div class="test"></div>
+  <div class="test"></div>
+  <div class="test"></div>
+  <div class="test"></div>
+  <div class="test"></div>
+  <div class="test"></div>
 </section>

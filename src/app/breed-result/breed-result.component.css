@@ -1,118 +1,90 @@
-.fieldset {
+.form {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-  border: #543b39;
+  position: relative;
 }
+
+.fieldset {
+  border: none;
+}
+
 .legend {
   font-size: 28px;
   color: #543b39;
   text-align: center;
+  padding: 10px;
 }
-/* div {
-  display: block;
-} */
-/* .div-container {
+
+.scroll {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+}
+
+.div-container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-} */
+  align-items: center;
+  background-color: #eee8da;
+  position: absolute;
+  top: 200px;
+}
+
 .breed-card {
-  height: 300px;
-  width: 300px;
-  border: 3px solid #997750;
-  border-radius: 5%;
+  /* height: 300px; */
+  width: 270px;
+  border: 3px solid #543b39;
+  border-radius: 10px;
   padding: 15px;
-  margin: 10px;
-  margin-bottom: 10px;
+  margin: 20px;
   background-color: #fcfcf2;
+}
+
+.title {
   text-align: center;
-  flex: 1;
-}
-label {
-  color: #e4883e;
-  font-size: 20px;
-  padding-left: 10px;
-}
-.description {
-  color: #997750;
-  text-align: initial;
-  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-bottom: 10px;
 }
-/* .go-button {
-  color: #e4883e;
-  size: 25px;
-  border: none;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 26px;
-  margin: 4px 2px;
-} */
+
+.name {
+  font-size: 20px;
+  color: #543b39;
+  margin-left: 10px;
+}
+
+.description {
+  color: #543b39;
+}
+
+.button {
+  position: absolute;
+  top: 70px;
+}
 
 @media only screen and (min-width: 768px) {
-  .fieldset {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .legend {
-    font-size: 28px;
-    color: #543b39;
-    text-align: center;
-  }
-  .div-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 50px;
-    background-color: #eee8da;
-  }
-  .breed-card {
-    height: 450px;
-    width: 300px;
-    border: 3px solid #997750;
-    border-radius: 5%;
-    padding: 10px;
-    margin: 10px;
-    margin-bottom: 10px;
-    background-color: #fcfcf2;
-    text-align: center;
-    flex: 1;
+  .scroll {
+    overflow-y: scroll;
+    height: 55vh;
   }
 
-  label + input {
-    display: flex;
-    align-items: center;
-    padding-right: 10px;
-    justify-content: center;
+  .div-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    top: 0;
   }
-  label {
-    color: #e4883e;
-    font-size: 20px;
-    padding-left: 10px;
+
+  .breed-card {
+    height: 300px;
+    width: 300px;
   }
-  .description {
-    color: #997750;
-    text-align: initial;
-    padding-top: 10px;
+
+  .button {
+    width: 50%;
+    position: relative;
   }
-  /* .go-button {
-    color: #e4883e;
-    size: 20px;
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 26px;
-    margin: 4px 2px;
-  } */
 }

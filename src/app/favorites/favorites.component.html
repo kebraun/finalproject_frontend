@@ -1,7 +1,7 @@
-<section>
-	<ul>
+<main class="main">
+	<ul class="ul">
 		<li *ngFor="let cat of favCats; index as i">
-			<app-cat-card [catRef]="cat" [pageRef]="page" (deleted)="delete(i)"></app-cat-card>
+			<app-cat-card [catRef]="cat" (deleted)="delete(i)"></app-cat-card>
 		</li>
 	</ul>
-</section>
+</main>

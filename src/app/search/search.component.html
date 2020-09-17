@@ -4,7 +4,7 @@
       <p class="breed-name">{{ item.breed }}</p>
     </div>
     <div class="breed-slide" *ngFor="let cat of item.catsArray">
-      <app-cat-card [catRef]="cat" [pageRef]="page"> </app-cat-card>
+      <app-cat-card [catRef]="cat"> </app-cat-card>
     </div>
   </section>
 </ul>

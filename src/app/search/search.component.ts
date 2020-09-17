@@ -13,7 +13,6 @@ export class SearchComponent implements OnInit {
 	cats; //interface later?
 	breedsToSearch: string[] = [];
 	breedCatsArray: Breedcatsmatch[] = [];
-	page = "search";
 
 	constructor(
 		private catServ: CatDetailsService,

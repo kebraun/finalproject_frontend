@@ -1,25 +1,29 @@
-<!-- cat breed name -->
-<!-- cat breed image -->
-<!-- cat breed description -->
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<form #breedForm="ngForm" (ngSubmit)="setBreedsToSearch(breedForm)">
+<form
+  class="form"
+  #breedForm="ngForm"
+  (ngSubmit)="setBreedsToSearch(breedForm)"
+>
   <fieldset class="fieldset" ngModelGroup="breeds">
-    <legend class="legend">Breeds matching your criteria</legend>
-    <div class="div-container">
-      <div class="breed-card" *ngFor="let breed of filteredBreeds">
-        <!-- <label for="{{ breed.name }}">{{ breed.name }}</label> -->
-        <input
-          class="input"
-          type="checkbox"
-          id="{{ breed.name }}"
-          name="{{ breed.name }}"
-          ngModel
-        />
-        <label for="{{ breed.name }}">{{ breed.name }}</label>
-        <!-- <img src="{{ breed.primary }}" alt="" /> -->
-        <p class="description">{{ breed.description }}</p>
+    <legend class="legend">Breeds matching your criteria:</legend>
+    <div class="scroll">
+      <div class="div-container">
+        <div class="breed-card" *ngFor="let breed of filteredBreeds">
+          <!-- <label for="{{ breed.name }}">{{ breed.name }}</label> -->
+          <div class="title">
+            <input
+              class="input"
+              type="checkbox"
+              id="{{ breed.name }}"
+              name="{{ breed.name }}"
+              ngModel
+            />
+            <label class="name" for="{{ breed.name }}">{{ breed.name }}</label>
+          </div>
+          <!-- <img src="{{ breed.primary }}" alt="" /> -->
+          <p class="description">{{ breed.description }}</p>
+        </div>
       </div>
     </div>
   </fieldset>
-  <button class="go-button">Go find one!</button>
+  <button class="button center">Go find one!</button>
 </form>

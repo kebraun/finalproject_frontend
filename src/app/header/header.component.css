@@ -19,6 +19,7 @@ li {
   padding: 0 30px;
   position: absolute; /* THIS BOY */
   width: 100%;
+  z-index: 999;
 }
 
 .title {

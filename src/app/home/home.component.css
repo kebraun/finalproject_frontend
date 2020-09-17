@@ -65,7 +65,7 @@
   color: #e4883e;
 }
 
-.image {
+.illustration {
   display: none;
 }
 
@@ -113,16 +113,9 @@
     background-color: #e4883e;
   }
 
-  /* .image {
-    display: flex;
-    flex: 1;
-    border: 1px solid black;
-    width: 500px;
-    height: 400px;
-  } */
-
   .illustration {
     width: 50vh;
+    display: flex;
   }
 
   .credit {

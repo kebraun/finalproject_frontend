@@ -29,7 +29,7 @@ div {
   background-repeat: no-repeat;
 }
 .img-container-kanchan {
-  background-image: url("/assets/images/headshot2020.jpg");
+  background-image: url("/assets/images/Kanchan.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 250px;
@@ -100,7 +100,7 @@ div {
     padding: 15px;
   }
   .img-container-kanchan {
-    background-image: url("/assets/images/headshot2020.jpg");
+    background-image: url("/assets/images/Kanchan.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 250px;

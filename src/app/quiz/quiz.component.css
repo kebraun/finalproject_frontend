@@ -9,8 +9,8 @@
 .quizForm {
 	display: flex;
 	flex-direction: column;
-
 	justify-content: center;
+	align-items: center;
 }
 .inputContainer {
 	display: flex;
@@ -68,5 +68,9 @@
 	.questionDiv {
 		width: 225px;
 		height: 225px;
+	}
+
+	.button {
+		width: 50%;
 	}
 }

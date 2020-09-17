@@ -23,13 +23,13 @@
     <div class="info">
       <p class="name">{{ catRef.name }}</p>
       <div class="buttons">
-        <button class="hide">
+        <!-- <button [ngClass]={'hide': pageRef ==='favorites' }>
           <i class="fas fa-heart" (click)="addToFavorites(catRef.id)"></i>
-        </button>
-        <button class="more" (click)="showCatBio(catRef.id)">More</button>
-        <!-- <button class="hide">
-          <i class="far fa-minus-square" (click)="delete()"></i>
         </button> -->
+        <button class="more" (click)="showCatBio(catRef.id)">More</button>
+         <!-- <button class="hide">
+          <i class="far fa-minus-square" (click)="delete()"></i>
+        </button>  -->
       </div>
     </div>
   </li>

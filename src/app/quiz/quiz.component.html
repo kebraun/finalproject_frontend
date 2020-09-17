@@ -5,13 +5,13 @@
     <div class="questionDiv">
     <legend class="legend">How playful is your ideal cat?</legend>
     <div class="qContainer">
-      <section class="option"><input type="radio" id="playful1" name="playfulness" value="0" [checked]="true" ngModel />
+      <section class="option"><input type="radio" id="playful1" name="playfulness" value="0" [(ngModel)]="playfulness" checked />
       <label class="optionLabel" class="option" for="playful1">No Preference</label></section>
-      <section class="option"><input type="radio" id="playful2" name="playfulness" value="2" ngModel />
+      <section class="option"><input type="radio" id="playful2" name="playfulness" value="2" [(ngModel)]="playfulness" />
       <label class="optionLabel" for="playful2">A little</label></section>
-      <section class="option"><input type="radio" id="playful3" name="playfulness" value="3" ngModel />
+      <section class="option"><input type="radio" id="playful3" name="playfulness" value="3" [(ngModel)]="playfulness" />
       <label class="optionLabel" for="playful3">Moderately</label></section>
-      <section class="option"><input type="radio" id="playful4" name="playfulness" value="4" ngModel />
+      <section class="option"><input type="radio" id="playful4" name="playfulness" value="4" [(ngModel)]="playfulness" />
       <label class="optionLabel" for="playful4">A lot</label></section>
     </div>
     </div>
@@ -19,13 +19,13 @@
     <div class="questionDiv">
       <legend class="legend">How intelligent is your ideal cat?</legend>    
       <div class="qContainer">
-      <section class="option"><input type="radio" id="intelligence1" name="intelligence" value="0" ngModel />
+      <section class="option"><input type="radio" id="intelligence1" name="intelligence" value="0" [(ngModel)]="intelligence" checked/>
       <label class="optionLabel" for="intelligence1">No Preference</label></section>                    
-      <section class="option"><input type="radio" id="intelligence2" name="intelligence" value="2" ngModel />
+      <section class="option"><input type="radio" id="intelligence2" name="intelligence" value="2" [(ngModel)]="intelligence" />
       <label class="optionLabel" for="intelligence2">A little</label></section>
-      <section class="option"><input type="radio" id="intelligence3" name="intelligence" value="3" ngModel />
+      <section class="option"><input type="radio" id="intelligence3" name="intelligence" value="3" [(ngModel)]="intelligence" />
       <label class="optionLabel" for="intelligence3">Moderately</label></section>
-      <section class="option"><input type="radio" id="intelligence4" name="intelligence" value="4" ngModel />
+      <section class="option"><input type="radio" id="intelligence4" name="intelligence" value="4" [(ngModel)]="intelligence" />
       <label class="optionLabel" for="intelligence4">A lot</label></section>
     </div>
     </div>
@@ -34,13 +34,13 @@
     <div class="questionDiv">
       <legend class="legend">How vocal is your ideal cat?</legend>
       <div class="qContainer">
-      <section class="option"><input type="radio" id="vocal1" name="vocal" value="0" ngModel />
+      <section class="option"><input type="radio" id="vocal1" name="vocal" value="0" [(ngModel)]="vocal" checked/>
       <label class="optionLabel" for="vocal1">No Preference</label></section>
-      <section class="option"><input type="radio" id="vocal2" name="vocal" value="2" ngModel />
+      <section class="option"><input type="radio" id="vocal2" name="vocal" value="2" [(ngModel)]="vocal" />
       <label class="optionLabel" for="vocal2">A little</label></section>
-      <section class="option"><input type="radio" id="vocal3" name="vocal" value="3" ngModel />
+      <section class="option"><input type="radio" id="vocal3" name="vocal" value="3" [(ngModel)]="vocal" />
       <label class="optionLabel" for="vocal3">Moderately</label></section>
-      <section class="option"><input type="radio" id="vocal4" name="vocal" value="4" ngModel />
+      <section class="option"><input type="radio" id="vocal4" name="vocal" value="4" [(ngModel)]="vocal" />
       <label class="optionLabel" for="vocal4">A lot</label></section>
     </div>
     </div>
@@ -49,13 +49,13 @@
     <div class="questionDiv">
       <legend class="legend">How much grooming will your ideal cat need?</legend>
       <div class="qContainer">
-      <section class="option"><input type="radio" id="grooming1" name="grooming" value="0" ngModel />
+      <section class="option"><input type="radio" id="grooming1" name="grooming" value="0" [(ngModel)]="grooming" checked/>
       <label class="optionLabel" for="grooming1">No preference</label></section>
-      <section class="option"><input type="radio" id="grooming2" name="grooming" value="2" ngModel />
+      <section class="option"><input type="radio" id="grooming2" name="grooming" value="2" [(ngModel)]="grooming" />
       <label class="optionLabel" for="grooming2">A little</label></section>
-      <section class="option"><input type="radio" id="grooming3" name="grooming" value="3" ngModel />
+      <section class="option"><input type="radio" id="grooming3" name="grooming" value="3" [(ngModel)]="grooming" />
       <label class="optionLabel" for="grooming3">Moderately</label></section>
-      <section class="option"><input type="radio" id="grooming4" name="grooming" value="4" ngModel />
+      <section class="option"><input type="radio" id="grooming4" name="grooming" value="4" [(ngModel)]="grooming" />
       <label class="optionLabel" for="grooming4">A lot</label></section>
     </div>
 
@@ -66,13 +66,13 @@
       <div class="questionDiv">
         <legend class="legend">How adaptable is your ideal cat to the new environment?</legend>
         <div class="qContainer">
-        <section class="option"><input type="radio" id="adaptable1" name="adaptable" value="0" ngModel />
+        <section class="option"><input type="radio" id="adaptable1" name="adaptable" value="0" [(ngModel)]="adaptable" checked/>
         <label class="optionLabel" for="adaptable1">No preference</label></section>
-        <section class="option"><input type="radio" id="adaptable2" name="adaptable" value="2" ngModel />
+        <section class="option"><input type="radio" id="adaptable2" name="adaptable" value="2" [(ngModel)]="adaptable" />
         <label class="optionLabel" for="adaptable2">A little</label></section>
-        <section class="option"><input type="radio" id="adaptable3" name="adaptable" value="3" ngModel />
+        <section class="option"><input type="radio" id="adaptable3" name="adaptable" value="3" [(ngModel)]="adaptable" />
         <label class="optionLabel" for="adaptable3">Moderately</label></section>
-        <section class="option"><input type="radio" id="adaptable4" name="adaptable" value="4" ngModel />
+        <section class="option"><input type="radio" id="adaptable4" name="adaptable" value="4" [(ngModel)]="adaptable" />
         <label class="optionLabel" for="adaptable4">A lot</label></section>
       </div>
 
@@ -81,18 +81,18 @@
       <div class="questionDiv">
         <legend class="legend">How much does your ideal cat shed?</legend>
         <div class="qContainer">
-        <section class="option"><input type="radio" id="shed1" name="shedding" value="0" ngModel />
+        <section class="option"><input type="radio" id="shed1" name="shedding" value="0" [(ngModel)]="shedding" checked/>
         <label class="optionLabel" for="shed1">No preference</label></section>
-        <section class="option"><input type="radio" id="shed2" name="shedding" value="2" ngModel />
+        <section class="option"><input type="radio" id="shed2" name="shedding" value="2" [(ngModel)]="shedding" />
         <label class="optionLabel" for="shed2">A little</label></section>
-        <section class="option"><input type="radio" id="shed3" name="shedding" value="3" ngModel />
+        <section class="option"><input type="radio" id="shed3" name="shedding" value="3" [(ngModel)]="shedding" />
         <label class="optionLabel" for="shed3">Moderately</label></section>
-        <section class="option"><input type="radio" id="shed4" name="shedding" value="4" ngModel />
+        <section class="option"><input type="radio" id="shed4" name="shedding" value="4" [(ngModel)]="shedding" />
         <label class="optionLabel" for="shed4">A lot</label></section>
 
       </div>
     </div>
   </div>
-    <button>Submit</button>
+    <button class="button">Submit</button>
   </form>
 </main>

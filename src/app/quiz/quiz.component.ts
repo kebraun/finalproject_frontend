@@ -9,9 +9,13 @@ import { CatBreedDetailsService } from "../cat-breed-details.service";
 	styleUrls: ["./quiz.component.css"],
 })
 export class QuizComponent implements OnInit {
-	// @Output() submit = new EventEmitter<any>();
-
 	catBreeds: any = [];
+	playfulness = "0";
+	vocal = "0";
+	intelligence = "0";
+	adaptable = "0";
+	shedding = "0";
+	grooming = "0";
 
 	constructor(
 		private catBreedService: CatBreedDetailsService,

@@ -12,7 +12,6 @@ export class FavoritesComponent implements OnInit {
 	@Input() deleted: Cat;
 	favoriteCatIds: number[] = []; // array of favorite cat ids
 	favCats: Cat[] = []; // array of cat objects
-	page = "favorites";
 
 	constructor(private cService: CatDetailsService) {}
 
@@ -27,6 +26,7 @@ export class FavoritesComponent implements OnInit {
 			this.cService.getCatForId(catId).subscribe(
 				(response) => {
 					let cat: Cat = response;
+					cat.isFavorite = true;
 					this.favCats.push(cat);
 				},
 				(error) => {

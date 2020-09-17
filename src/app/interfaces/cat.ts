@@ -11,4 +11,5 @@ export interface Cat {
 	colors: object;
 	contact: object;
 	primary_photo_cropped: object;
+	isFavorite: boolean;
 }

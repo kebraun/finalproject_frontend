@@ -11,15 +11,15 @@ import { Visitor } from "../interfaces/visitor";
 })
 export class CatCardComponent implements OnInit {
 	@Input() catRef;
+
 	@Output() deleted = new EventEmitter<void>();
+	favoriteFlag: boolean = false;
 
 	constructor(private router: Router, private cService: CatDetailsService) {}
 
 	ngOnInit(): void {}
 
 	showCatBio = (catId: number) => {
-		// this.router.navigate(['search'], {
-
 		this.router.navigate(["cat-bio"], {
 			queryParams: {
 				cat: catId,
@@ -27,8 +27,17 @@ export class CatCardComponent implements OnInit {
 		});
 	};
 
+	handleHeartClick = (catId: number) => {
+		if (this.catRef.isFavorite) {
+			this.delete();
+		} else {
+			this.addToFavorites(catId);
+		}
+	};
+
 	addToFavorites = (catId: number) => {
 		this.cService.addFavoriteCat(catId);
+		this.favoriteFlag = true;
 		console.log("Added ", this.cService.getFavoriteCats());
 	};
 

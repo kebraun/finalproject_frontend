@@ -38,3 +38,32 @@ body {
     background-color: #e4883e;
   }
 }
+
+/* Tooltip container */
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted #997750; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+	visibility: hidden;
+
+	background-color: #997750;
+	color: #fcfcf2;
+	text-align: center;
+	padding: 5px;
+	border-radius: 6px;
+
+	/* position */
+
+	bottom: 100%;
+	left: 50%;
+	margin-left: -60px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}

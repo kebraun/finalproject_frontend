@@ -21,14 +21,17 @@
       class="img"
     />
     <div class="info">
-      <p class="name">{{ catRef.name }} </p>
+      <p class="name">{{ catRef.name }}</p>
       <div class="buttons">
         <div class="tooltip">
           <span class="tooltiptext">Add/remove favorites</span>
-          <button class="hide" >
-            <i class="fas fa-heart"  [ngClass]="{'orange': catRef.isFavorite }" (click)="handleHeartClick(catRef.id)"></i>
+          <button class="hide">
+            <i
+              class="fas fa-heart"
+              [ngClass]="{ orange: catRef.isFavorite }"
+              (click)="handleHeartClick(catRef.id)"
+            ></i>
           </button>
-          
         </div>
 
         <button class="more" (click)="showCatBio(catRef.id)">More</button>

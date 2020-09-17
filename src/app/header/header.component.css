@@ -21,6 +21,32 @@ li {
   width: 100%;
   z-index: 999;
 }
+.navbar-links {
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.navbar-links a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar-links a:hover {
+  border-bottom: 3px solid #543b39;
+  /* transform: scale(1.2); */
+}
+.navbar-links a.active {
+  border-bottom: 3px solid #543b39;
+  /* transform: scale(1.2); */
+}
+.navbar-links ul li a {
+  transition: all 0.4s;
+}
 
 .title {
   font-size: 2.5rem;
@@ -91,7 +117,33 @@ li {
   .navbar-links {
     display: flex;
   }
+  .navbar-links {
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
 
+  .navbar-links a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 3px solid transparent;
+  }
+
+  .navbar-links a:hover {
+    border-bottom: 3px solid #543b39;
+    color: #543b39;
+    /* transform: scale(1.2); */
+  }
+  .navbar-links a.active {
+    border-bottom: 3px solid #543b39;
+    /* transform: scale(1.2); */
+  }
+  .navbar-links ul li a {
+    transition: all 0.4s;
+  }
   .navbar-links ul {
     display: flex;
     flex-direction: row;

@@ -56,6 +56,9 @@ div {
   border-radius: 50%;
   border: 2px solid #000;
 }
+.linkedin {
+  fill: #0072b1;
+}
 @media only screen and (min-width: 768px) {
   body,
   h1,
@@ -65,7 +68,7 @@ div {
   }
   h1 {
     margin-top: 50px;
-    border-bottom: 2px solid #000;
+    /* border-bottom: 2px solid #000; */
     /* font-family */
   }
   .bios-container {
@@ -75,6 +78,7 @@ div {
     border-radius: 25px;
     box-shadow: 0 2px 10px 5px #000;
     border: 2px solid #e4883e;
+    margin-top: 50px;
   }
   .katie-info {
     flex: 1;

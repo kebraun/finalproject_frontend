@@ -1,0 +1,40 @@
+@media only screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .title {
+    font-size: 2.5rem;
+    margin: 1rem;
+    text-decoration: none;
+    font-family: "Dancing Script", cursive;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    font-size: 26px;
+    height: 22px;
+    outline: none;
+    width: 110px;
+    flex: 1;
+  }
+  .purrrfect {
+    color: #e4883e;
+  }
+  .copyright {
+    flex: 1;
+    font-family: "Nunito", sans-serif;
+    color: #e4883e;
+    font-size: 16px;
+  }
+  .apis {
+    font-size: 16px;
+    flex: 1;
+    font-family: "Nunito", sans-serif;
+    color: #e4883e;
+  }
+  .apis a {
+    text-decoration: none;
+    color: #e4883e;
+  }
+}

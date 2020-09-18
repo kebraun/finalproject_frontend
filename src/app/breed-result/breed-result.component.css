@@ -85,6 +85,6 @@
 
   .button {
     width: 50%;
-    position: relative;
+    position: static;
   }
 }

@@ -71,6 +71,9 @@ div {
     /* border-bottom: 2px solid #000; */
     /* font-family */
   }
+  .div-container {
+    margin-bottom: 380px;
+  }
   .bios-container {
     display: flex;
     justify-content: center;

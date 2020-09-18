@@ -3,11 +3,13 @@
     <!-- <a routerLink="/search">Back to search result</a> -->
       <section class="horizontal">
       <section class="img container">
+        <section class="imgFixedDiv">
         <img
           src="{{ catBio.primary_photo_cropped['medium'] }}"
           alt="picture of the cat"
           class="catPic"
         />
+      </section>
         <section class="genderNname">
           <div *ngIf="catBio.gender === 'Female'" class="gender">
             <svg class="Icon_ionic-md-female" viewBox="7.875 2.25 20.25 31.5">
@@ -43,7 +45,9 @@
         </section>
       </section>
       <section class="desc">
+        <pre>
         {{ catBio.description }}
+      </pre>
       </section>
       <section class="contactsContainer container">
         <p class="contacts">

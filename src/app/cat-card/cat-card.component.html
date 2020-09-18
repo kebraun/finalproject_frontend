@@ -1,17 +1,4 @@
-<!-- <li class="cat-card-info">
-  <p>
-    {{ catRef.name }} <button (click)="addToFavorites(catRef.id)">+</button>
-    <button (click)="delete()">-</button>
-  </p>
-  <img
-    src="{{ catRef.primary_photo_cropped?.small }}"
-    alt="{{ catRef.name }}"
-  />
-  <p>{{ catRef.breeds.primary }}</p>
-  <p>{{ catRef.age }}</p>
-  <p>{{ catRef.gender }}</p>
-  
-</li> -->
+
 
 <div class="container">
   <li class="cat-card-info">
@@ -28,8 +15,8 @@
           <button class="hide">
             <i
               class="fas fa-heart"
-              [ngClass]="{ orange: catRef.isFavorite }"
-              (click)="handleHeartClick(catRef.id)"
+              [ngClass]="{ favorite: favoriteFlag || catRef.isFavorite}"
+              (click)="handleHeartClick(catRef.id) "
             ></i>
           </button>
         </div>

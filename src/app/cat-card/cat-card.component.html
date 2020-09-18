@@ -1,11 +1,10 @@
-
-
 <div class="container">
   <li class="cat-card-info">
     <img
       src="{{ catRef.primary_photo_cropped?.small }}"
       alt="{{ catRef.name }}"
       class="img"
+      onerror="this.src = 'assets/images/placeholder2.jpg';"
     />
     <div class="info">
       <p class="name">{{ catRef.name }}</p>
@@ -15,8 +14,8 @@
           <button class="hide">
             <i
               class="fas fa-heart"
-              [ngClass]="{ favorite: favoriteFlag || catRef.isFavorite}"
-              (click)="handleHeartClick(catRef.id) "
+              [ngClass]="{ favorite: favoriteFlag || catRef.isFavorite }"
+              (click)="handleHeartClick(catRef.id)"
             ></i>
           </button>
         </div>

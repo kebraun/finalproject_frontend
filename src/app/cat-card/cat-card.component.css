@@ -1,87 +1,89 @@
 .container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cat-card-info {
-	margin: 10px;
-	padding: 0;
-	border: 3px solid #543b39;
-	list-style: none;
-	width: 300px;
-	height: 335px;
-	border-radius: 10px;
-	background-color: #fcfcf2;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+  margin: 10px;
+  padding: 0;
+  border: 3px solid #543b39;
+  list-style: none;
+  width: 300px;
+  height: 335px;
+  border-radius: 10px;
+  background-color: #fcfcf2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* box-shadow: 10px 10px 5px #aaaaaa; */
 }
 
 .img {
-	width: 100%;
-	object-fit: cover;
-	overflow: hidden;
-	border-radius: 5px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 30%;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
 .info {
-	/* position: absolute; */
-	/* bottom: 0; */
-	background-color: fcfcf2;
-	width: 100%;
-	border-radius: 0 0 30px 30px;
-	text-align: center;
+  /* position: absolute; */
+  /* bottom: 0; */
+  background-color: #fcfcf2;
+  width: 100%;
+  border-radius: 0 0 30px 30px;
+  text-align: center;
 }
 
 .name {
-	font-size: 24px;
-	margin: 10px 20px;
-	color: #543b39;
+  font-size: 24px;
+  margin: 10px 20px 0 20px;
+  color: #543b39;
 }
 
 .buttons {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .more {
-	background-color: transparent;
-	text-transform: uppercase;
-	border: 3px #543b39 solid;
-	color: #543b39;
-	margin: 12px;
-	border-radius: 3px;
-	padding: 0 10px;
-	font-weight: 700;
-	cursor: pointer;
+  background-color: transparent;
+  text-transform: uppercase;
+  border: 3px #543b39 solid;
+  color: #543b39;
+  margin: 12px;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .more:hover {
-	color: #e4883e;
-	border: 3px #e4883e solid;
+  color: #e4883e;
+  border: 3px #e4883e solid;
 }
 
 .far,
 .fas {
-	color: #543b39;
-	font-size: 35px;
-	margin: 10px;
-	cursor: pointer;
+  color: #543b39;
+  font-size: 35px;
+  margin: 10px;
+  cursor: pointer;
 }
 
 .far:hover,
 .fas:hover {
-	color: #e4883e;
+  color: #e4883e;
 }
 
 .favorite {
-	color: #e4883e;
+  color: #e4883e;
 }
 
 .hide {
-	background-color: transparent;
-	border: none;
-	outline: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }

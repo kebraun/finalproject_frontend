@@ -4,11 +4,10 @@
   (ngSubmit)="setBreedsToSearch(breedForm)"
 >
   <fieldset class="fieldset" ngModelGroup="breeds">
-    <legend class="legend">Breeds matching your criteria:</legend>
+    <legend class="legend">Found {{filteredBreeds.length}} breeds matching your criteria.</legend>
     <div class="scroll">
       <div class="div-container">
         <div class="breed-card" *ngFor="let breed of filteredBreeds">
-          <!-- <label for="{{ breed.name }}">{{ breed.name }}</label> -->
           <div class="title">
             <input
               class="input"
@@ -19,7 +18,7 @@
             />
             <label class="name" for="{{ breed.name }}">{{ breed.name }}</label>
           </div>
-          <!-- <img src="{{ breed.primary }}" alt="" /> -->
+       
           <p class="description">{{ breed.description }}</p>
         </div>
       </div>

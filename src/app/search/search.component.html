@@ -1,10 +1,10 @@
 <ul>
   <section class="breed-section" *ngFor="let item of breedCatsArray">
-    <div>
-      <p class="breed-name">{{ item.breed }}</p>
-    </div>
-    <div class="breed-slide" *ngFor="let cat of item.catsArray">
-      <app-cat-card [catRef]="cat"> </app-cat-card>
+    <div class="scroll">
+      <div class="breed-name">{{ item.breed }}</div>
+      <div class="breed-slide" *ngFor="let cat of item.catsArray">
+        <app-cat-card [catRef]="cat"> </app-cat-card>
+      </div>
     </div>
   </section>
 </ul>

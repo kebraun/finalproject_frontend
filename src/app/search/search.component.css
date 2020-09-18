@@ -1,18 +1,25 @@
 .breed-section {
-  display: flex;
-  overflow-x: scroll;
-  padding: 30px;
+  padding: 70px 0px;
   margin: 50px 20px;
   position: relative;
   background-color: #eee8da;
 }
 
+.scroll {
+  display: flex;
+  overflow-x: scroll;
+}
+
 .breed-name {
   position: absolute;
-  top: 3px;
-  left: 60px;
-  font-size: 26px;
+  width: 100%;
+  text-align: center;
+  color: #fcfcf2;
+  top: 15px;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  font-size: 2rem;
   background-color: #e4883e;
-  padding: 3px;
-  border-radius: 10px 10px 0 0;
+  /* padding: 3px; */
+  /* border-radius: 10px 10px 0 0; */
 }

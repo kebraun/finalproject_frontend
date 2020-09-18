@@ -18,6 +18,7 @@ export class BreedResultComponent implements OnInit {
 
   ngOnInit(): void {
     this.filteredBreeds = this.catBreedService.getFilteredBreeds();
+    this.startAtTop();
   }
 
   getSelectedOptions = (options: any) => {
@@ -37,5 +38,9 @@ export class BreedResultComponent implements OnInit {
     console.log(breedsArr);
     this.catBreedService.setBreedsToSearch(breedsArr);
     this.router.navigate(['search']);
+  };
+
+  startAtTop = () => {
+    window.scrollTo(0, 0);
   };
 }

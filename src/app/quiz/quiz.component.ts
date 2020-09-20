@@ -63,7 +63,7 @@ export class QuizComponent implements OnInit {
 				this.getLevelsToCheck(groomingLevel).includes(breed.grooming)
 			);
 		});
-		console.log(filteredBreeds);
+		//console.log(filteredBreeds);
 		this.catBreedService.setFilteredBreeds(filteredBreeds);
 		this.router.navigate(["breed-result"]);
 	};

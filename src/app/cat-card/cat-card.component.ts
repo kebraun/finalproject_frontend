@@ -1,8 +1,6 @@
-import { ActivatedRoute, Router } from "@angular/router";
+import { Router } from "@angular/router";
 import { CatDetailsService } from "./../cat-details.service";
 import { Component, Input, OnInit, Output, EventEmitter } from "@angular/core";
-import { VisitorService } from "../visitor.service";
-import { Visitor } from "../interfaces/visitor";
 
 @Component({
 	selector: "app-cat-card",

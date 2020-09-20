@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { VisitorService } from "../visitor.service";
 import { CatDetailsService } from "../cat-details.service";
 import { Cat } from "../interfaces/cat";
 

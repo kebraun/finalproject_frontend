@@ -6,7 +6,6 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { QuizComponent } from "./quiz/quiz.component";
-import { UserInfoComponent } from "./user-info/user-info.component";
 import { BreedResultComponent } from "./breed-result/breed-result.component";
 import { FavoritesComponent } from "./favorites/favorites.component";
 
@@ -15,7 +14,6 @@ const routes: Routes = [
 	{ path: "search", component: SearchComponent },
 	{ path: "cat-bio", component: CatBioComponent },
 	{ path: "quiz", component: QuizComponent },
-	{ path: "user-info", component: UserInfoComponent },
 	{ path: "breed-result", component: BreedResultComponent },
 	{ path: "favorites", component: FavoritesComponent },
 	{ path: "not-found", component: NotFoundComponent },

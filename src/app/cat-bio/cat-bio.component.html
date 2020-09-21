@@ -84,18 +84,28 @@
     </section>
   </section>
   <section class="adoption-info">
-    <p class="contacts">
+    <h2 class="org-name">
+      <a href="{{ orgInfo.url }}" target="_blank">
+        {{ orgInfo.name }}
+      </a>
+    </h2>
+    <div class="contacts">
       <i class="far fa-envelope"></i>
-      {{ catBio.contact["email"] }}
-    </p>
-    <p class="contacts">
+      <!-- {{ catBio.contact["email"] }} -->
+      {{ orgInfo.email }}
+      <span *ngIf="orgInfo.email === null">please use phone</span>
+    </div>
+    <div class="contacts">
       <i class="fas fa-phone"></i>
-      {{ catBio.contact["phone"] }}
-    </p>
-    <p class="contacts">
-      <i class="fas fa-link"></i>
-      {{ catBio.contact["address"]["city"] }},
-      {{ catBio.contact["address"]["state"] }}
-    </p>
+      <!-- {{ catBio.contact["phone"] }} -->
+      {{ orgInfo.phone }}
+      <span *ngIf="orgInfo.phone === null">please use email</span>
+    </div>
+    <div class="contacts">
+      <i class="fas fa-map-marker-alt"></i>
+      <!-- {{ catBio.contact["address"]["city"] }},
+      {{ catBio.contact["address"]["state"] }} -->
+      {{ orgInfo.address.city }}, {{ orgInfo.address.state }}
+    </div>
   </section>
 </section>

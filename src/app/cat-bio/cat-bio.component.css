@@ -105,6 +105,20 @@
   font-size: 1.2rem;
 }
 
+.org-name {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.org-name a {
+  text-decoration: none;
+  color: #543b39;
+}
+
+.org-name a:hover {
+  color: #e4883e;
+}
+
 .contacts {
   margin: 10px 0;
 }
@@ -144,7 +158,7 @@
   }
 
   .adoption-info {
-    height: 30vh;
+    height: 100%;
     justify-content: center;
   }
 

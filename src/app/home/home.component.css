@@ -2,11 +2,6 @@
   box-sizing: border-box;
 }
 
-/* .home {
-  background-image: url("/assets/paws-bg.png");
-  background-repeat: repeat;
-} */
-
 .purrr {
   font-style: italic;
 }
@@ -15,8 +10,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 30px;
-  /* background-color: rgba(255, 255, 255, 0.8); */
+  padding: 30px 50px;
   border-radius: 30px;
 }
 
@@ -43,14 +37,6 @@
 }
 
 .button {
-  /* background-color: #997750;
-  color: #fcfcf2;
-  border: none;
-  border-radius: 10px;
-  font-size: 30px;
-  padding: 30px;
-  margin: 20px 0;
-  cursor: pointer; */
   width: 100%;
 }
 
@@ -78,7 +64,7 @@
   }
 
   .home {
-    height: 90vh;
+    height: 80vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -113,8 +99,14 @@
     background-color: #e4883e;
   }
 
+  .image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
   .illustration {
-    width: 50vh;
+    height: 70vh;
     display: flex;
   }
 

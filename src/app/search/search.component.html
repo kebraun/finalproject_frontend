@@ -1,5 +1,34 @@
-<ul>
-  <section class="breed-section" *ngFor="let item of breedCatsArray">
+<main>
+  <form #searchForm="ngForm" (change)="setSearchCriteria(searchForm)" >
+    <article>Search by 
+     
+        <label for="Age" class="label"> Age: </label>
+        <select name="searchAge" id="age" 
+          [(ngModel)]="searchAge">
+          <option value="Any" >Any</option>
+          <option value="Baby">Baby</option>
+          <option value="Young">Young</option>
+          <option value="Adult">Adult</option>
+          <option value="Senior">Senior</option>
+        </select>
+       
+        <label for="gender" class="label">Gender:</label> 
+        <select name="searchGender" id="gender"  [(ngModel)]="searchGender">
+          <option value="Any" selected>Any</option>
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+         
+        </select>
+  
+        <label for="state">State</label>
+        <input type="text" name="state" id="state">
+        <!-- <button>Submit</button> -->
+      
+    </article>
+  </form>
+  
+
+  <section class="breed-section" *ngFor="let item of breedCatsArrFiltered">
     <div class="scroll">
       <div class="breed-name">{{ item.breed }}</div>
       <div class="breed-slide" *ngFor="let cat of item.catsArray">
@@ -7,4 +36,6 @@
       </div>
     </div>
   </section>
-</ul>
+
+
+</main>

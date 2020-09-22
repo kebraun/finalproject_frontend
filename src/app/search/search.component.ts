@@ -3,6 +3,7 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { CatBreedDetailsService } from "../cat-breed-details.service";
 import { CatDetailsService } from "../cat-details.service";
+import { NgForm } from "@angular/forms";
 
 @Component({
 	selector: "app-search",
@@ -14,6 +15,10 @@ export class SearchComponent implements OnInit {
 	breedsToSearch: string[] = [];
 	breedCatsArray: Breedcatsmatch[] = [];
 
+	breedCatsArrFiltered: Breedcatsmatch[] = [];
+	searchAge: string = "Any";
+	searchGender: string = "Any";
+
 	constructor(
 		private catServ: CatDetailsService,
 		private breedServ: CatBreedDetailsService,
@@ -24,6 +29,7 @@ export class SearchComponent implements OnInit {
 		// this.getCats();
 		this.breedsToSearch = this.breedServ.getBreedsToSearch();
 		this.getCatsForBreed();
+		this.breedCatsArrFiltered = this.breedCatsArray;
 	}
 
 	getCats = () => {
@@ -54,5 +60,43 @@ export class SearchComponent implements OnInit {
 			);
 		});
 		console.log("cat map", this.breedCatsArray);
+	};
+
+	setSearchCriteria = (searchForm: NgForm) => {
+		this.searchAge = searchForm.value.searchAge;
+		this.searchGender = searchForm.value.searchGender;
+		this.filterCats();
+	};
+
+	filterCats = () => {
+		if (this.searchAge === "Any" && this.searchGender === "Any") {
+			this.breedCatsArrFiltered = this.breedCatsArray;
+		} else {
+			//reset the this.breedCatsArrFiltered
+			this.breedCatsArrFiltered = [];
+
+			this.breedCatsArray.forEach((item) => {
+				let filteredArray: Breedcatsmatch = item.catsArray.filter((cat) => {
+					if (this.searchAge != "Any" && this.searchGender != "Any") {
+						return (
+							cat.age === this.searchAge && cat.gender === this.searchGender
+						);
+					} else if (this.searchAge != "Any") {
+						return cat.age === this.searchAge;
+					} else if (this.searchGender != "Any") {
+						return cat.gender === this.searchGender;
+					}
+					return true;
+				});
+
+				// console.log("Breed: ", item.breed, "filteredArray: ", filteredArray);
+
+				this.breedCatsArrFiltered.push({
+					breed: item.breed,
+					catsArray: filteredArray,
+				});
+			});
+			console.log("After filtering: ", this.breedCatsArrFiltered);
+		}
 	};
 }

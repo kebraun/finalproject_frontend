@@ -1,98 +1,328 @@
 <main class="main">
-<p class="quizInstruction">Please choose your preference.</p>
-<form #quizForm="ngForm" (ngSubmit)="getCatBreedDetails(quizForm)" class="quizForm">
-  <div class="inputContainer">
-    <div class="questionDiv">
-    <legend class="legend">How playful is your ideal cat?</legend>
-    <div class="qContainer">
-      <section class="option"><input type="radio" id="playful1" name="playfulness" value="0" [(ngModel)]="playfulness" checked />
-      <label class="optionLabel" class="option" for="playful1">No Preference</label></section>
-      <section class="option"><input type="radio" id="playful2" name="playfulness" value="2" [(ngModel)]="playfulness" />
-      <label class="optionLabel" for="playful2">A little</label></section>
-      <section class="option"><input type="radio" id="playful3" name="playfulness" value="3" [(ngModel)]="playfulness" />
-      <label class="optionLabel" for="playful3">Moderately</label></section>
-      <section class="option"><input type="radio" id="playful4" name="playfulness" value="4" [(ngModel)]="playfulness" />
-      <label class="optionLabel" for="playful4">A lot</label></section>
-    </div>
-    </div>
-    
-    <div class="questionDiv">
-      <legend class="legend">How intelligent is your ideal cat?</legend>    
-      <div class="qContainer">
-      <section class="option"><input type="radio" id="intelligence1" name="intelligence" value="0" [(ngModel)]="intelligence" checked/>
-      <label class="optionLabel" for="intelligence1">No Preference</label></section>                    
-      <section class="option"><input type="radio" id="intelligence2" name="intelligence" value="2" [(ngModel)]="intelligence" />
-      <label class="optionLabel" for="intelligence2">A little</label></section>
-      <section class="option"><input type="radio" id="intelligence3" name="intelligence" value="3" [(ngModel)]="intelligence" />
-      <label class="optionLabel" for="intelligence3">Moderately</label></section>
-      <section class="option"><input type="radio" id="intelligence4" name="intelligence" value="4" [(ngModel)]="intelligence" />
-      <label class="optionLabel" for="intelligence4">A lot</label></section>
-    </div>
-    </div>
-
-    
-    <div class="questionDiv">
-      <legend class="legend">How vocal is your ideal cat?</legend>
-      <div class="qContainer">
-      <section class="option"><input type="radio" id="vocal1" name="vocal" value="0" [(ngModel)]="vocal" checked/>
-      <label class="optionLabel" for="vocal1">No Preference</label></section>
-      <section class="option"><input type="radio" id="vocal2" name="vocal" value="2" [(ngModel)]="vocal" />
-      <label class="optionLabel" for="vocal2">A little</label></section>
-      <section class="option"><input type="radio" id="vocal3" name="vocal" value="3" [(ngModel)]="vocal" />
-      <label class="optionLabel" for="vocal3">Moderately</label></section>
-      <section class="option"><input type="radio" id="vocal4" name="vocal" value="4" [(ngModel)]="vocal" />
-      <label class="optionLabel" for="vocal4">A lot</label></section>
-    </div>
-    </div>
-
-   
-    <div class="questionDiv">
-      <legend class="legend">How much grooming will your ideal cat need?</legend>
-      <div class="qContainer">
-      <section class="option"><input type="radio" id="grooming1" name="grooming" value="0" [(ngModel)]="grooming" checked/>
-      <label class="optionLabel" for="grooming1">No preference</label></section>
-      <section class="option"><input type="radio" id="grooming2" name="grooming" value="2" [(ngModel)]="grooming" />
-      <label class="optionLabel" for="grooming2">A little</label></section>
-      <section class="option"><input type="radio" id="grooming3" name="grooming" value="3" [(ngModel)]="grooming" />
-      <label class="optionLabel" for="grooming3">Moderately</label></section>
-      <section class="option"><input type="radio" id="grooming4" name="grooming" value="4" [(ngModel)]="grooming" />
-      <label class="optionLabel" for="grooming4">A lot</label></section>
-    </div>
-
-    </div>
-
-    
-    
+  <!-- <p class="quizInstruction">Please choose your preference.</p> -->
+  <form
+    #quizForm="ngForm"
+    (ngSubmit)="getCatBreedDetails(quizForm)"
+    class="quizForm"
+  >
+    <div class="inputContainer">
+      <!-- energy level -->
       <div class="questionDiv">
-        <legend class="legend">How adaptable is your ideal cat to the new environment?</legend>
+        <legend class="legend">
+          How <span class="orange">active</span> is your ideal cat?
+        </legend>
         <div class="qContainer">
-        <section class="option"><input type="radio" id="adaptable1" name="adaptable" value="0" [(ngModel)]="adaptable" checked/>
-        <label class="optionLabel" for="adaptable1">No preference</label></section>
-        <section class="option"><input type="radio" id="adaptable2" name="adaptable" value="2" [(ngModel)]="adaptable" />
-        <label class="optionLabel" for="adaptable2">A little</label></section>
-        <section class="option"><input type="radio" id="adaptable3" name="adaptable" value="3" [(ngModel)]="adaptable" />
-        <label class="optionLabel" for="adaptable3">Moderately</label></section>
-        <section class="option"><input type="radio" id="adaptable4" name="adaptable" value="4" [(ngModel)]="adaptable" />
-        <label class="optionLabel" for="adaptable4">A lot</label></section>
+          <section class="option">
+            <label class="optionLabel" for="playful1">
+              <input
+                type="radio"
+                id="playful1"
+                name="playfulness"
+                value="0"
+                [(ngModel)]="playfulness"
+                checked
+              />
+              <span class="checkmark"></span>
+              No Preference
+            </label>
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="playful2">
+              <input
+                type="radio"
+                id="playful2"
+                name="playfulness"
+                value="2"
+                [(ngModel)]="playfulness"
+              />
+              <span class="checkmark"></span>
+              My cat prefers to sleep
+            </label>
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="playful3">
+              <input
+                type="radio"
+                id="playful3"
+                name="playfulness"
+                value="3"
+                [(ngModel)]="playfulness"
+              />
+              <span class="checkmark"></span>
+              My cat plays sometimes
+            </label>
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="playful4">
+              <input
+                type="radio"
+                id="playful4"
+                name="playfulness"
+                value="4"
+                [(ngModel)]="playfulness"
+              />
+              <span class="checkmark"></span>
+              My cat wants to play a lot
+            </label>
+          </section>
+        </div>
+        <div class="button" (click)="toggleDisplayVoc()">Next</div>
       </div>
 
-    </div>
-    
-      <div class="questionDiv">
-        <legend class="legend">How much does your ideal cat shed?</legend>
+      <!-- vocalization -->
+      <div class="questionDiv" [ngClass]="{ hide: !showDivVoc }">
+        <legend class="legend">
+          Does your ideal cat <span class="orange">talk</span> to you a lot?
+        </legend>
         <div class="qContainer">
-        <section class="option"><input type="radio" id="shed1" name="shedding" value="0" [(ngModel)]="shedding" checked/>
-        <label class="optionLabel" for="shed1">No preference</label></section>
-        <section class="option"><input type="radio" id="shed2" name="shedding" value="2" [(ngModel)]="shedding" />
-        <label class="optionLabel" for="shed2">A little</label></section>
-        <section class="option"><input type="radio" id="shed3" name="shedding" value="3" [(ngModel)]="shedding" />
-        <label class="optionLabel" for="shed3">Moderately</label></section>
-        <section class="option"><input type="radio" id="shed4" name="shedding" value="4" [(ngModel)]="shedding" />
-        <label class="optionLabel" for="shed4">A lot</label></section>
+          <section class="option">
+            <label class="optionLabel" for="vocal1">
+              <input
+                type="radio"
+                id="vocal1"
+                name="vocal"
+                value="0"
+                [(ngModel)]="vocal"
+                checked
+              />
+              <span class="checkmark"></span>
+              No Preference
+            </label>
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="vocal2">
+              <input
+                type="radio"
+                id="vocal2"
+                name="vocal"
+                value="2"
+                [(ngModel)]="vocal"
+              />
+              <span class="checkmark"></span>
+              They're very quiet
+            </label>
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="vocal3">
+              <input
+                type="radio"
+                id="vocal3"
+                name="vocal"
+                value="3"
+                [(ngModel)]="vocal"
+              />
+              <span class="checkmark"></span>
+              They meow every so often
+            </label>
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="vocal4">
+              <input
+                type="radio"
+                id="vocal4"
+                name="vocal"
+                value="4"
+                [(ngModel)]="vocal"
+              />
+              <span class="checkmark"></span>
+              They're very chatty
+            </label>
+          </section>
+        </div>
+        <div class="button" (click)="toggleDisplayShed()">Next</div>
+      </div>
 
+      <!-- shedding level -->
+      <div class="questionDiv" [ngClass]="{ hide: !showDivShed }">
+        <legend class="legend">
+          How much cat <span class="orange">hair</span> can you tolerate?
+        </legend>
+        <div class="qContainer">
+          <section class="option">
+            <label class="optionLabel" for="shed1">
+              <input
+                type="radio"
+                id="shed1"
+                name="shedding"
+                value="0"
+                [(ngModel)]="shedding"
+                checked
+              />
+
+              <span class="checkmark"></span>
+              No preference
+            </label>
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="shed2">
+              <input
+                type="radio"
+                id="shed2"
+                name="shedding"
+                value="2"
+                [(ngModel)]="shedding"
+              />
+              <span class="checkmark"></span>
+              I can't stand it
+            </label>
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="shed3">
+              <input
+                type="radio"
+                id="shed3"
+                name="shedding"
+                value="3"
+                [(ngModel)]="shedding"
+              />
+              <span class="checkmark"></span>
+              I can take a little hair
+            </label>
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="shed4">
+              <input
+                type="radio"
+                id="shed4"
+                name="shedding"
+                value="4"
+                [(ngModel)]="shedding"
+              />
+              <span class="checkmark"></span>
+              I prefer to be covered in hair
+            </label>
+          </section>
+        </div>
+        <div class="button" (click)="toggleDisplaySoc()">Next</div>
+      </div>
+
+      <!-- social needs -->
+      <div class="questionDiv" [ngClass]="{ hide: !showDivSoc }">
+        <legend class="legend">
+          How much <span class="orange">interaction</span> does your ideal cat
+          need?
+        </legend>
+        <div class="qContainer">
+          <section class="option">
+            <label class="optionLabel" for="social1">
+              <input
+                type="radio"
+                id="social1"
+                name="sociality"
+                value="0"
+                [(ngModel)]="sociality"
+                checked
+              />
+              <span class="checkmark"></span>
+              No Preference
+            </label>
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="social2">
+              <input
+                type="radio"
+                id="social2"
+                name="sociality"
+                value="3"
+                [(ngModel)]="sociality"
+              />
+              <span class="checkmark"></span>
+              My cat prefers to be left alone
+            </label>
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="social3">
+              <input
+                type="radio"
+                id="social3"
+                name="sociality"
+                value="4"
+                [(ngModel)]="sociality"
+              />
+              <span class="checkmark"></span>
+              My cat spends half of their time with me, half of their time alone
+            </label>
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="social4">
+              <input
+                type="radio"
+                id="social4"
+                name="sociality"
+                value="5"
+                [(ngModel)]="sociality"
+              />
+              <span class="checkmark"></span>
+              My cat needs to be around me all the time
+            </label>
+          </section>
+        </div>
+        <div class="button" (click)="toggleDisplayFriend()">Next</div>
+      </div>
+
+      <!-- stranger friendly -->
+      <div class="questionDiv" [ngClass]="{ hide: !showDivFriend }">
+        <legend class="legend">
+          Is your ideal cat <span class="orange">friendly</span> towards
+          strangers?
+        </legend>
+        <div class="qContainer">
+          <section class="option">
+            <label class="optionLabel" for="friendly1">
+              <input
+                type="radio"
+                id="friendly1"
+                name="friendly"
+                value="0"
+                [(ngModel)]="friendly"
+                checked
+              />
+              <span class="checkmark"></span>
+              No Preference
+            </label>
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="friendly2">
+              <input
+                type="radio"
+                id="friendly2"
+                name="friendly"
+                value="2"
+                [(ngModel)]="friendly"
+              />
+              <span class="checkmark"></span>
+              Stranger danger!
+            </label>
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="friendly3">
+              <input
+                type="radio"
+                id="friendly3"
+                name="friendly"
+                value="3"
+                [(ngModel)]="friendly"
+              />
+              <span class="checkmark"></span>
+              They greet the occasional stranger
+            </label>
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="friendly4">
+              <input
+                type="radio"
+                id="friendly4"
+                name="friendly"
+                value="4"
+                [(ngModel)]="friendly"
+              />
+              <span class="checkmark"></span>
+              Every stranger is a potential new friend
+            </label>
+          </section>
+        </div>
+        <button class="button submit">Submit</button>
       </div>
     </div>
-  </div>
-    <button class="button">Submit</button>
   </form>
 </main>

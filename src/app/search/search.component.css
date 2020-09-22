@@ -1,8 +1,10 @@
 .breed-section {
-	padding: 70px 0px;
-	margin: 50px 20px;
-	position: relative;
-	background-color: #eee8da;
+
+  padding: 70px 0px 20px 0;
+  margin: 20px 0;
+  position: relative;
+  background-color: #eee8da;
+
 }
 
 .scroll {

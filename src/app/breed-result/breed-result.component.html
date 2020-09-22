@@ -1,31 +1,35 @@
-<form
-  class="form"
-  #breedForm="ngForm"
-  (ngSubmit)="setBreedsToSearch(breedForm)"
->
-  <fieldset class="fieldset" ngModelGroup="breeds">
-    <legend class="legend">
-      Found {{ filteredBreeds.length }} breeds matching your criteria.
-    </legend>
-    <div class="scroll">
-      <div class="div-container">
-        <div class="breed-card" *ngFor="let breed of filteredBreeds">
-          <div class="title">
-            <input
-              class="input"
-              type="checkbox"
-              id="{{ breed.name }}"
-              name="{{ breed.name }}"
-              ngModel
-            />
-            <label class="name" for="{{ breed.name }}">{{ breed.name }}</label>
-          </div>
+<main class="main">
+  <form
+    class="form"
+    #breedForm="ngForm"
+    (ngSubmit)="setBreedsToSearch(breedForm)"
+  >
+    <fieldset class="fieldset" ngModelGroup="breeds">
+      <legend class="legend">
+        Found {{ filteredBreeds.length }} breeds matching your criteria.
+      </legend>
+      <div class="scroll">
+        <div class="div-container">
+          <div class="breed-card" *ngFor="let breed of filteredBreeds">
+            <div class="title">
+              <input
+                class="input"
+                type="checkbox"
+                id="{{ breed.name }}"
+                name="{{ breed.name }}"
+                ngModel
+              />
+              <label class="name" for="{{ breed.name }}">{{
+                breed.name
+              }}</label>
+            </div>
 
-          <p class="description desktop">{{ breed.description }}</p>
-          <p class="description mobile">{{ breed.temperament }}</p>
+            <p class="description desktop">{{ breed.description }}</p>
+            <p class="description mobile">{{ breed.temperament }}</p>
+          </div>
         </div>
       </div>
-    </div>
-  </fieldset>
-  <button class="button center">Go find one!</button>
-</form>
+    </fieldset>
+    <button class="button center">Go find one!</button>
+  </form>
+</main>

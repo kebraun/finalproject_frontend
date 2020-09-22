@@ -18,6 +18,69 @@ export class SearchComponent implements OnInit {
 	breedCatsArrFiltered: Breedcatsmatch[] = [];
 	searchAge: string = "Any";
 	searchGender: string = "Any";
+	searchState: string = "Any";
+
+	states: string[] = [
+		"AL",
+		"AK",
+		"AS",
+		"AZ",
+		"AR",
+		"CA",
+		"CO",
+		"CT",
+		"DE",
+		"DC",
+		"FM",
+		"FL",
+		"GA",
+		"GU",
+		"HI",
+		"ID",
+		"IL",
+		"IN",
+		"IA",
+		"KS",
+		"KY",
+		"LA",
+		"ME",
+		"MH",
+		"MD",
+		"MA",
+		"MI",
+		"MN",
+		"MS",
+		"MO",
+		"MT",
+		"NE",
+		"NV",
+		"NH",
+		"NJ",
+		"NM",
+		"NY",
+		"NC",
+		"ND",
+		"MP",
+		"OH",
+		"OK",
+		"OR",
+		"PW",
+		"PA",
+		"PR",
+		"RI",
+		"SC",
+		"SD",
+		"TN",
+		"TX",
+		"UT",
+		"VT",
+		"VI",
+		"VA",
+		"WA",
+		"WV",
+		"WI",
+		"WY",
+	];
 
 	constructor(
 		private catServ: CatDetailsService,
@@ -65,11 +128,24 @@ export class SearchComponent implements OnInit {
 	setSearchCriteria = (searchForm: NgForm) => {
 		this.searchAge = searchForm.value.searchAge;
 		this.searchGender = searchForm.value.searchGender;
+		this.searchState = searchForm.value.searchState;
+		console.log(
+			"this.searchAge: ",
+			this.searchAge,
+			" this.searchGender: ",
+			this.searchGender,
+			" this.searchState:",
+			this.searchState
+		);
 		this.filterCats();
 	};
 
 	filterCats = () => {
-		if (this.searchAge === "Any" && this.searchGender === "Any") {
+		if (
+			this.searchAge === "Any" &&
+			this.searchGender === "Any" &&
+			this.searchState === "Any"
+		) {
 			this.breedCatsArrFiltered = this.breedCatsArray;
 		} else {
 			//reset the this.breedCatsArrFiltered
@@ -77,26 +153,46 @@ export class SearchComponent implements OnInit {
 
 			this.breedCatsArray.forEach((item) => {
 				let filteredArray: Breedcatsmatch = item.catsArray.filter((cat) => {
-					if (this.searchAge != "Any" && this.searchGender != "Any") {
-						return (
-							cat.age === this.searchAge && cat.gender === this.searchGender
-						);
-					} else if (this.searchAge != "Any") {
-						return cat.age === this.searchAge;
-					} else if (this.searchGender != "Any") {
-						return cat.gender === this.searchGender;
+					if (this.searchState === "Any") {
+						if (this.searchAge != "Any" && this.searchGender != "Any") {
+							return (
+								cat.age === this.searchAge && cat.gender === this.searchGender
+							);
+						} else if (this.searchAge != "Any") {
+							return cat.age === this.searchAge;
+						} else if (this.searchGender != "Any") {
+							return cat.gender === this.searchGender;
+						}
+						return true;
+					} else {
+						if (this.searchAge != "Any" && this.searchGender != "Any") {
+							return (
+								cat.age === this.searchAge &&
+								cat.gender === this.searchGender &&
+								cat.contact["address"]["state"] === this.searchState
+							);
+						} else if (this.searchAge != "Any") {
+							return (
+								cat.age === this.searchAge &&
+								cat.contact["address"]["state"] === this.searchState
+							);
+						} else if (this.searchGender != "Any") {
+							return (
+								cat.gender === this.searchGender &&
+								cat.contact["address"]["state"] === this.searchState
+							);
+						} else {
+							return cat.contact["address"]["state"] === this.searchState;
+						}
 					}
-					return true;
 				});
-
-				// console.log("Breed: ", item.breed, "filteredArray: ", filteredArray);
 
 				this.breedCatsArrFiltered.push({
 					breed: item.breed,
 					catsArray: filteredArray,
 				});
 			});
-			console.log("After filtering: ", this.breedCatsArrFiltered);
+			// console.log("After filtering: ", this.breedCatsArrFiltered);
 		}
 	};
 }

@@ -21,9 +21,10 @@
         </select>
   
         <label for="state">State</label>
-        <input type="text" name="state" id="state">
-        <!-- <button>Submit</button> -->
-      
+        <select name="searchState" id="state" [(ngModel)]="searchState">
+          <option value="Any" selected>Any</option>
+          <option *ngFor="let state of states" value="{{state}}">{{state}}</option>
+        </select>
     </article>
   </form>
   

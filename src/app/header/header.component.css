@@ -102,6 +102,10 @@ li {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   .spacer {
     height: 10vh;

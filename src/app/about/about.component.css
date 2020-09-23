@@ -1,6 +1,32 @@
+body,
+h1,
+h2,
+.story {
+  margin: 0;
+  padding: 0;
+}
 h1 {
   margin-top: 10px;
   text-align: center;
+}
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 13px 13px 13px;
+  padding: 0px 10px 0px 10px;
+  /* font-size: 1.23rem;
+  border: orange 1px solid;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px 5px #000; */
+}
+.story-paragraph {
+  padding-bottom: 15px;
+}
+.story-paragraph-end {
+  font-style: italic;
+  font-size: 13px;
 }
 .div-container {
   display: flex;
@@ -10,6 +36,16 @@ h1 {
 }
 div {
   display: block;
+}
+.bios-container {
+  display: block;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px 5px #000;
+  border: 2px solid #e4883e;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 .katie-info {
   flex: 1;
@@ -70,17 +106,42 @@ div {
 @media only screen and (min-width: 768px) {
   body,
   h1,
-  h2 {
+  h2,
+  .div-container,
+  .story {
     margin: 0;
     padding: 0;
   }
   h1 {
-    margin-top: 50px;
-    /* border-bottom: 2px solid #000; */
-    /* font-family */
+    margin-top: 30px;
+    padding-bottom: 7px;
+  }
+
+  .story {
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 10px;
+    /* padding: 0 20px 0 20px; */
+  }
+  .story-paragraph {
+    padding-bottom: 20px;
+    text-align: start;
+  }
+  .story-paragraph-end {
+    font-style: italic;
+    font-size: 20px;
+    padding-top: 40px;
   }
   .div-container {
-    margin-bottom: 380px;
+    margin-bottom: 100px;
+    padding-top: 30px;
+    /* padding: 0 20px 0 20px; */
+  }
+  .about-us {
+    font-size: 40px;
+    padding-top: 10px;
   }
   .bios-container {
     display: flex;
@@ -122,6 +183,9 @@ div {
   .anthony-info {
     flex: 1;
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
   }
   .img-container-anthony {
     background-image: url("/assets/images/IMG-5592.jpg");
@@ -138,8 +202,9 @@ div {
     object-fit: cover;
     border-radius: 50%;
     border: 2px solid #000;
-    margin-left: 110px;
+    margin-left: 0px;
   }
+
   .linkedin {
     fill: #0072b1;
   }

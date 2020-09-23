@@ -2,8 +2,8 @@
   <i class="fas fa-arrow-left"></i> Back
 </button>
 
-<section class="main">
-  <section class="left">
+<main class="main">
+  <section class="left" *ngIf="catBio">
     <section class="cat-img">
       <img
         src="{{ catBio.primary_photo_cropped['medium'] }}"
@@ -23,13 +23,9 @@
           </div>
           <div class="name">{{ catBio.name }}</div>
         </section>
-        <!-- <button class="hide">
-          <i class="fas fa-heart"></i>
-        </button> -->
+
       </section>
-      <!-- <button class="button adopt-more">
-      <a href="#adoption-info">Adopt Me!</a>
-    </button> -->
+
       <section class="breed-color-age">
         <div class="br-c-age">
           <label for="breed" class="label">Breed</label>
@@ -50,8 +46,9 @@
       </section>
       <section class="description">
         <p>
-          {{ htmlDecode(catBio.description) }}
+          {{ catBio.description}}
         </p>
+        <a href="{{ catBio.url}}" target="_blank" class="More"> More</a>
       </section>
       <section class="attributes">
         <section class="goodWithContainer">
@@ -83,7 +80,7 @@
       </section>
     </section>
   </section>
-  <section class="adoption-info">
+  <section class="adoption-info" *ngIf="orgInfo">
     <h2 class="org-name">
       <a href="{{ orgInfo.url }}" target="_blank">
         {{ orgInfo.name }}
@@ -91,21 +88,18 @@
     </h2>
     <div class="contacts">
       <i class="far fa-envelope"></i>
-      <!-- {{ catBio.contact["email"] }} -->
       {{ orgInfo.email }}
       <span *ngIf="orgInfo.email === null">please use phone</span>
     </div>
     <div class="contacts">
       <i class="fas fa-phone"></i>
-      <!-- {{ catBio.contact["phone"] }} -->
       {{ orgInfo.phone }}
       <span *ngIf="orgInfo.phone === null">please use email</span>
     </div>
     <div class="contacts">
       <i class="fas fa-map-marker-alt"></i>
-      <!-- {{ catBio.contact["address"]["city"] }},
-      {{ catBio.contact["address"]["state"] }} -->
+      
       {{ orgInfo.address.city }}, {{ orgInfo.address.state }}
     </div>
   </section>
-</section>
+</main>

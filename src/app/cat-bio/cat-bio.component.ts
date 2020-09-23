@@ -10,7 +10,7 @@ import { Location } from "@angular/common/";
 	styleUrls: ["./cat-bio.component.css"],
 })
 export class CatBioComponent implements OnInit {
-	catBio: Cat;
+	catBio: Cat = null;
 	catId: number;
 	orgInfo: any;
 	orgId: string;
@@ -35,9 +35,20 @@ export class CatBioComponent implements OnInit {
 	};
 
 	getCatBio = (catId: number): any => {
-		this.catDetailsServ.getCatForId(catId).subscribe((catIdResponse) => {
-			this.catBio = catIdResponse;
-		});
+		this.catDetailsServ.getCatForId(catId).subscribe(
+			(catIdResponse) => {
+				this.catBio = catIdResponse;
+				if (catIdResponse.description.indexOf("&") != -1) {
+					this.catBio.description = this.decodeHtmlCharCodes(
+						catIdResponse.description
+					);
+					console.log("In here ", this.catBio.description);
+				}
+			},
+			(error) => {
+				console.log(error.message);
+			}
+		);
 	};
 
 	getOrg = () => {
@@ -47,11 +58,14 @@ export class CatBioComponent implements OnInit {
 	};
 
 	getOrgName = (orgId: string) => {
-		this.catDetailsServ
-			.getOrganization(orgId)
-			.subscribe((organizationResponse) => {
+		this.catDetailsServ.getOrganization(orgId).subscribe(
+			(organizationResponse) => {
 				this.orgInfo = organizationResponse;
-			});
+			},
+			(error) => {
+				console.log(error.message);
+			}
+		);
 	};
 
 	goBackPage = () => {
@@ -59,7 +73,23 @@ export class CatBioComponent implements OnInit {
 	};
 
 	htmlDecode = (input: string) => {
-		var doc = new DOMParser().parseFromString(input, "text/html");
+		let doc = new DOMParser().parseFromString(input, "text/html");
+		// console.log("htmldecode :::::", doc.documentElement.textContent);
 		return doc.documentElement.textContent;
+	};
+
+	decodeHtmlCharCodes = (str: string) => {
+		let newStr;
+		if (str.indexOf("&amp;") != -1) {
+			let newStr1 = str.replace(/(&amp;)/gi, "&");
+			newStr = newStr1.replace(/(&#(\d+);)/g, (match, capture, charCode) =>
+				String.fromCharCode(charCode)
+			);
+		} else {
+			newStr = str.replace(/(&#(\d+);)/g, (match, capture, charCode) =>
+				String.fromCharCode(charCode)
+			);
+		}
+		return newStr;
 	};
 }

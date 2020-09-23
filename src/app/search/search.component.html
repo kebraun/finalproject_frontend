@@ -51,6 +51,12 @@
   <section class="breed-section" *ngFor="let item of breedCatsArrFiltered">
     <div class="scroll">
       <div class="breed-name">{{ item.breed }}</div>
+      <!-- <div class="error" *ngIf="breedCatsArrayFiltered.catsArray === null">
+        <p>
+          Oh no! It looks like no cats of this breed are available right now.
+          Please consider looking at another breed!
+        </p>
+      </div> -->
       <div class="breed-slide" *ngFor="let cat of item.catsArray">
         <app-cat-card [catRef]="cat"> </app-cat-card>
       </div>

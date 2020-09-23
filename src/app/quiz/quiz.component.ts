@@ -89,7 +89,7 @@ export class QuizComponent implements OnInit {
         this.getLevelsToCheck(friendLevel).includes(breed.stranger_friendly)
       );
     });
-    //console.log(filteredBreeds);
+    console.log(filteredBreeds);
     this.catBreedService.setFilteredBreeds(filteredBreeds);
     this.router.navigate(['breed-result']);
   };

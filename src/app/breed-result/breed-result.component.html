@@ -9,6 +9,15 @@
         Found {{ filteredBreeds.length }} breeds matching your criteria.
       </legend>
       <div class="scroll">
+        <div *ngIf="filteredBreeds.length === 0" class="error">
+          <p>
+            Uh-oh! Looks like we couldn't find any breeds matching your
+            specifications.
+          </p>
+          <div class="button center" routerLink="/quiz">
+            Click here to try again!
+          </div>
+        </div>
         <div class="div-container">
           <div class="breed-card" *ngFor="let breed of filteredBreeds">
             <div class="title">
@@ -30,6 +39,8 @@
         </div>
       </div>
     </fieldset>
-    <button class="button center">Go find one!</button>
+    <button *ngIf="filteredBreeds.length > 0" class="button center">
+      Go find one!
+    </button>
   </form>
 </main>

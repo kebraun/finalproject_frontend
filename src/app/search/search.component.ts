@@ -112,9 +112,16 @@ export class SearchComponent implements OnInit {
 			// console.log(breed);
 			this.catServ.getCatsForBreed(breed).subscribe(
 				(response) => {
-					// console.log('cats for the breed', response);
-					// let catsArr:any[] = response;
-					let breedCatsMatch = { breed: breed, catsArray: response };
+					console.log("cats for the breed response", response);
+					// If cats have no information other than name, skip it
+					let catsArr: any[] = response;
+					if (catsArr) {
+						catsArr.filter((cat) => {
+							return cat.age != "" && cat.gender != "";
+						});
+					}
+					console.log("cats for the breed filtered", catsArr);
+					let breedCatsMatch = { breed: breed, catsArray: catsArr };
 					this.breedCatsArray.push(breedCatsMatch);
 				},
 				(error) => {

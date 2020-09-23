@@ -38,6 +38,7 @@ export class CatBioComponent implements OnInit {
 		this.catDetailsServ.getCatForId(catId).subscribe(
 			(catIdResponse) => {
 				this.catBio = catIdResponse;
+				console.log("catBio============", this.catBio);
 				if (catIdResponse.description.indexOf("&") != -1) {
 					this.catBio.description = this.decodeHtmlCharCodes(
 						catIdResponse.description
@@ -72,24 +73,15 @@ export class CatBioComponent implements OnInit {
 		this.location.back();
 	};
 
-	htmlDecode = (input: string) => {
-		let doc = new DOMParser().parseFromString(input, "text/html");
-		// console.log("htmldecode :::::", doc.documentElement.textContent);
-		return doc.documentElement.textContent;
-	};
-
 	decodeHtmlCharCodes = (str: string) => {
-		let newStr;
 		if (str.indexOf("&amp;") != -1) {
-			let newStr1 = str.replace(/(&amp;)/gi, "&");
-			newStr = newStr1.replace(/(&#(\d+);)/g, (match, capture, charCode) =>
-				String.fromCharCode(charCode)
-			);
-		} else {
-			newStr = str.replace(/(&#(\d+);)/g, (match, capture, charCode) =>
-				String.fromCharCode(charCode)
-			);
+			str = str.replace(/(&amp;)/gi, "&");
 		}
+
+		let newStr = str.replace(/(&#(\d+);)/g, (match, capture, charCode) =>
+			String.fromCharCode(charCode)
+		);
+
 		return newStr;
 	};
 }

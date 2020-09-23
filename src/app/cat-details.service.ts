@@ -18,7 +18,7 @@ export class CatDetailsService {
 	};
 
 	getCatsForBreed = (breedName: string) => {
-		return this.http.get(`${this.url}/petfinder`, {
+		return this.http.get<any[]>(`${this.url}/petfinder`, {
 			params: {
 				breed: breedName,
 			},

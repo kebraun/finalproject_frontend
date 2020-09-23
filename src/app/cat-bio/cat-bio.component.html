@@ -5,12 +5,18 @@
 <main class="main">
   <section class="left" *ngIf="catBio">
     <section class="cat-img">
-      <img
-        src="{{ catBio.primary_photo_cropped['medium'] }}"
+      <img *ngIf="catBio.primary_photo_cropped; else elseBlock"
+        src="{{ catBio?.primary_photo_cropped['medium'] }}"
         alt="picture of the cat"
         class="catPic"
-        onerror="this.src = 'assets/images/placeholder2.jpg';"
       />
+      <ng-template #elseBlock>
+      <img 
+        src="assets/images/placeholder2.jpg"
+        alt="placeholder as picture the cat is not available"
+        class="catPic"
+      />
+    </ng-template>
     </section>
     <section class="cat-bio">
       <section class="title">

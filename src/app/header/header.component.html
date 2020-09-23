@@ -1,22 +1,42 @@
 <header>
   <nav class="navbar">
     <a routerLink="/home" class="title">Purrrfect</a>
-    <span class="fas fa-bars" (click)="showNav()"></span>
-    <div class="navbar-links" id="nav">
+    <span class="fas fa-bars" (click)="toggle()"></span>
+    <div class="navbar-links">
       <ul>
         <li>
-          <a routerLink="/home" class="link" (click)="hideNav()">Home</a>
+          <a routerLink="/home" class="link">Home</a>
         </li>
         <li>
-          <a routerLink="/quiz" class="link" (click)="hideNav()">Get Paired</a>
+          <a routerLink="/quiz" class="link">Get Paired</a>
         </li>
         <li>
-          <a routerLink="/favorites" class="link" (click)="hideNav()"
+          <a routerLink="/favorites" class="link">Favorite Cats</a>
+        </li>
+        <li>
+          <a routerLink="/about" class="link">About</a>
+        </li>
+      </ul>
+    </div>
+    <div
+      [@openClose]="isOpen ? 'open' : 'closed'"
+      [ngClass]="{ hidden: !isOpen }"
+      class="insert-remove-container"
+    >
+      <ul>
+        <li>
+          <a routerLink="/home" class="link" (click)="toggle()">Home</a>
+        </li>
+        <li>
+          <a routerLink="/quiz" class="link" (click)="toggle()">Get Paired</a>
+        </li>
+        <li>
+          <a routerLink="/favorites" class="link" (click)="toggle()"
             >Favorite Cats</a
           >
         </li>
         <li>
-          <a routerLink="/about" class="link" (click)="hideNav()">About</a>
+          <a routerLink="/about" class="link" (click)="toggle()">About</a>
         </li>
       </ul>
     </div>

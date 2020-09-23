@@ -1,7 +1,7 @@
 <main class="main">
   <i
     class="fas fa-heart"
-    [ngClass]="{ favorite: favoriteFlag || catRef.isFavorite }"
+    [ngClass]="{ favorite: favoriteFlag || catRef.isFavorite , is_animating: isClicked}"
     (click)="handleHeartClick(catRef.id)"
   ></i>
   <div

@@ -10,6 +10,23 @@ import { CatBreedDetailsService } from '../cat-breed-details.service';
 })
 export class QuizComponent implements OnInit {
   catBreeds: any = [];
+  allBreeds: any = [];
+  toRemove: any = [
+    'aege',
+    'bamb',
+    'cspa',
+    'ctif',
+    'chee',
+    'cypr',
+    'dons',
+    'lihu',
+    'khao',
+    'kuri',
+    'mala',
+    'pixi',
+    'sava',
+    'srex',
+  ];
   playfulness = '0';
   vocal = '0';
   shedding = '0';
@@ -36,8 +53,14 @@ export class QuizComponent implements OnInit {
   getAllBreeds = () => {
     this.catBreedService.getCatBreedDetails().subscribe(
       (response) => {
-        // console.log('Breed stuff yo', response); //show all breeds
+        console.log('Breed stuff yo', response); //show all breeds
         this.catBreeds = response;
+        this.catBreeds = this.catBreeds.filter((item) => {
+          return !this.toRemove.includes(item.id);
+        });
+        console.log('filter', this.catBreeds);
+
+        // this.catBreeds = response;
       },
       (error) => {
         console.log(error.message);

@@ -53,7 +53,7 @@
     *ngFor="let item of breedCatsArrFiltered"
   >
     <div class="scroll">
-      <div class="breed-name">{{ item.breed }}</div>
+      <div class="breed-name">{{ item.breed }} <span class="temerament">({{item.breedTemperament}})</span></div>
       <div class="error" *ngIf="!item.catsArray || item.catsArray.length ==0" class="noCatsMsg">
         <p class="noCatsMsg">
           Oh no! It looks like no cats of this breed are available right now.

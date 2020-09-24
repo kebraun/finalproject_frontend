@@ -126,6 +126,22 @@ export class SearchComponent implements OnInit {
 				this.searchAge = params.get("searchAge");
 				this.searchGender = params.get("searchGender");
 				this.searchState = params.get("searchState");
+				console.log(
+					`Getting the search options from query params ${this.searchAge}, ${this.searchGender}, ${this.searchState}`
+				);
+			} else {
+				this.searchAge = this.searchServ.getSearchAge()
+					? this.searchServ.getSearchAge()
+					: "Any";
+				this.searchGender = this.searchServ.getSearchGender()
+					? this.searchServ.getSearchGender()
+					: "Any";
+				this.searchState = this.searchServ.getSearchState()
+					? this.searchServ.getSearchState()
+					: "Any";
+				console.log(
+					`Getting the search options from service ${this.searchAge}, ${this.searchGender}, ${this.searchState}`
+				);
 			}
 		});
 	};

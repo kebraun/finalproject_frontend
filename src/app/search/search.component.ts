@@ -99,7 +99,11 @@ export class SearchComponent implements OnInit {
 			this.breedCatsArray = this.searchServ.getCatsPerBreed();
 		}
 
-		this.breedCatsArrFiltered = this.searchServ.getCatsPerBreed();
+		if (this.searchServ.getFilteredCatsAfterSrch().length == 0) {
+			this.breedCatsArrFiltered = this.breedCatsArray;
+		} else {
+			this.breedCatsArrFiltered = this.searchServ.getFilteredCatsAfterSrch();
+		}
 		this.getSearchOptions();
 	}
 
@@ -157,11 +161,7 @@ export class SearchComponent implements OnInit {
 		this.searchAge = searchForm.value.searchAge;
 		this.searchGender = searchForm.value.searchGender;
 		this.searchState = searchForm.value.searchState;
-		this.searchServ.setSearchOptions(
-			this.searchAge,
-			this.searchGender,
-			this.searchState
-		);
+
 		if (
 			this.searchAge === "Any" &&
 			this.searchGender === "Any" &&
@@ -217,6 +217,13 @@ export class SearchComponent implements OnInit {
 					this.breedCatsArrFiltered.push(item);
 				}
 			});
+			// set this in service to access later on favorites page
+			this.searchServ.setSearchOptions(
+				this.searchAge,
+				this.searchGender,
+				this.searchState,
+				this.breedCatsArrFiltered
+			);
 			console.log("After filtering: ", this.breedCatsArrFiltered);
 		}
 	};

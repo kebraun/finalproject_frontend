@@ -9,18 +9,20 @@ export class SearchService {
 	searchGender: string = "Any";
 	searchState: string = "Any";
 	catsPerBreed: Breedcatsmatch[] = [];
+	filteredCatsPerBreed: Breedcatsmatch[] = [];
 
 	constructor() {}
 
 	setSearchOptions = (
 		srchAge: string,
 		srchGender: string,
-		srchState: string
+		srchState: string,
+		filteredArr: Breedcatsmatch[]
 	): void => {
 		this.searchAge = srchAge;
 		this.searchGender = srchGender;
 		this.searchState = srchState;
-
+		this.filteredCatsPerBreed = filteredArr;
 		console.log(
 			"this.searchAge: ",
 			this.searchAge,
@@ -49,5 +51,9 @@ export class SearchService {
 
 	getCatsPerBreed = (): Breedcatsmatch[] => {
 		return this.catsPerBreed;
+	};
+
+	getFilteredCatsAfterSrch = () => {
+		return this.filteredCatsPerBreed;
 	};
 }

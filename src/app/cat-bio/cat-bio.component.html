@@ -42,7 +42,7 @@
             {{ catBio.breeds["secondary"] }}
           </p>
         </div>
-        <div class="br-c-age">
+        <div class="br-c-age" *ngIf="catBio.colors['primary']">
           <label for="color" class="label">Color</label>
           <p>: {{ catBio.colors["primary"] }}</p>
         </div>

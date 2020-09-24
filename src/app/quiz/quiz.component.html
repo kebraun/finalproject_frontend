@@ -257,11 +257,76 @@
             </label>
           </section>
         </div>
-        <div class="button" (click)="toggleDisplayFriend()">Next</div>
+        <div class="button" (click)="toggleDisplayIntell()">Next</div>
       </div>
 
-      <!-- stranger friendly -->
-      <div class="questionDiv" [ngClass]="{ hide: !showDivFriend }">
+      <!-- ==intelligence -->
+
+      <div class="questionDiv" [ngClass]="{ hide: !showDivIntell }">
+        <legend class="legend">
+          How <span class="orange">intelligent</span> is your ideal cat?
+        </legend>
+        <div class="qContainer">
+          <section class="option">
+            <label class="optionLabel" for="intelligence1">
+              <input
+                type="radio"
+                id="intelligence1"
+                name="intelligence"
+                value="0"
+                [(ngModel)]="intelligence"
+              />
+              <span class="checkmark"></span>
+
+              No Preference</label
+            >
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="intelligence2">
+              <input
+                type="radio"
+                id="intelligence2"
+                name="intelligence"
+                value="3"
+                [(ngModel)]="intelligence"
+              />
+              <span class="checkmark"></span>
+
+              Moderately intelligent</label
+            >
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="intelligence3">
+              <input
+                type="radio"
+                id="intelligence3"
+                name="intelligence"
+                value="4"
+                [(ngModel)]="intelligence"
+              />
+              <span class="checkmark"></span>
+
+              Smarter than average</label
+            >
+          </section>
+          <section class="option">
+            <label class="optionLabel" for="intelligence4">
+              <input
+                type="radio"
+                id="intelligence4"
+                name="intelligence"
+                value="5"
+                [(ngModel)]="intelligence"
+              />
+              <span class="checkmark"></span>
+
+              They're a genius</label
+            >
+          </section>
+        </div>
+        <button class="button submit">Submit</button>
+      </div>
+      <!-- <div class="questionDiv" [ngClass]="{ hide: !showDivFriend }">
         <legend class="legend">
           Is your ideal cat <span class="orange">friendly</span> towards
           strangers?
@@ -321,8 +386,7 @@
             </label>
           </section>
         </div>
-        <button class="button submit">Submit</button>
-      </div>
+      </div> -->
     </div>
   </form>
 </main>

@@ -149,6 +149,9 @@ export class SearchComponent implements OnInit {
 	getCatsForBreed = (): void => {
 		if (this.breedCatsArray.length == 0) {
 			this.breedsToSearch.forEach((breed) => {
+				let breedDetails = this.breedServ.getBreedDetails(breed);
+				console.log("breed temperament ", breedDetails.temperament);
+
 				this.catServ.getCatsForBreed(breed).subscribe(
 					(response) => {
 						// console.log("cats for the breed response", response);
@@ -160,7 +163,11 @@ export class SearchComponent implements OnInit {
 							});
 						}
 						// console.log("cats for the breed filtered", catsArr);
-						let breedCatsMatch = { breed: breed, catsArray: catsArr };
+						let breedCatsMatch: Breedcatsmatch = {
+							breed: breed,
+							breedTemperament: breedDetails.temperament,
+							catsArray: catsArr,
+						};
 						this.breedCatsArray.push(breedCatsMatch);
 					},
 					(error) => {
@@ -227,6 +234,7 @@ export class SearchComponent implements OnInit {
 
 					this.breedCatsArrFiltered.push({
 						breed: item.breed,
+						breedTemperament: item.breedTemperament,
 						catsArray: filteredArray,
 					});
 				} else {

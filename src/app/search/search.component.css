@@ -38,14 +38,13 @@
 }
 
 .error {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #543b39;
-  padding: 30px;
-  font-size: 1.5rem;
-  text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #543b39;
+	padding: 30px;
+	font-size: 1.5rem;
+	text-align: center;
 }
 
 .label {
@@ -67,10 +66,19 @@
 	margin: 5px;
 	font-size: 14px;
 }
+.temerament {
+	font-size: small;
+	color: #543b39;
+	display: none;
+}
 
 @media screen and (min-width: 768px) {
 	.select {
 		width: 200px;
 		font-size: 1rem;
+	}
+
+	.temerament {
+		display: inline;
 	}
 }

@@ -1,43 +1,49 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from "@angular/core";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root',
+	providedIn: "root",
 })
 export class CatBreedDetailsService {
-  url: string = `https://api.thecatapi.com/v1/breeds`;
-  // `https://api.thecatapi.com/v1/breeds?energy_level=5`
+	url: string = `https://api.thecatapi.com/v1/breeds`;
+	// `https://api.thecatapi.com/v1/breeds?energy_level=5`
 
-  filteredBreeds: any = [];
-  breedsToSearch: any = [];
+	filteredBreeds: any[] = [];
+	breedsToSearch: any[] = [];
 
-  constructor(private http: HttpClient) {}
+	constructor(private http: HttpClient) {}
 
-  getCatBreedDetails = () => {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        'x-api-key': `469b0948-9c24-47ae-a23a-3a2c13f8d2bc`,
-      }),
-    };
+	getCatBreedDetails = () => {
+		const httpOptions = {
+			headers: new HttpHeaders({
+				"Content-Type": "application/json",
+				"x-api-key": `469b0948-9c24-47ae-a23a-3a2c13f8d2bc`,
+			}),
+		};
 
-    return this.http.get(this.url, httpOptions);
-  };
+		return this.http.get(this.url, httpOptions);
+	};
 
-  setFilteredBreeds = (filteredBreeds) => {
-    //add type
-    this.filteredBreeds = filteredBreeds;
-  };
+	setFilteredBreeds = (filteredBreeds) => {
+		//add type
+		this.filteredBreeds = filteredBreeds;
+	};
 
-  getFilteredBreeds = () => {
-    return this.filteredBreeds;
-  };
+	getFilteredBreeds = () => {
+		return this.filteredBreeds;
+	};
 
-  setBreedsToSearch = (breedsToSearch: string[]) => {
-    this.breedsToSearch = breedsToSearch;
-  };
+	getBreedDetails = (breedName: string): any => {
+		return this.filteredBreeds.find((breed) => {
+			return breed.name === breedName;
+		});
+	};
 
-  getBreedsToSearch = () => {
-    return this.breedsToSearch;
-  };
+	setBreedsToSearch = (breedsToSearch: string[]) => {
+		this.breedsToSearch = breedsToSearch;
+	};
+
+	getBreedsToSearch = () => {
+		return this.breedsToSearch;
+	};
 }

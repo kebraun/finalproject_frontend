@@ -1,9 +1,12 @@
+<button (click)="goBackToSearch()" class="anchor hide">
+  <i class="fas fa-arrow-left"></i> Back To Search
+</button>
 <h1 class="header">Favorites</h1>
 
 <section class="section">
-  <!-- <ul class="ul"> -->
+
   <li *ngFor="let cat of favCats; index as i">
     <app-cat-card [catRef]="cat" (deleted)="delete(i)"></app-cat-card>
   </li>
-  <!-- </ul> -->
+
 </section>

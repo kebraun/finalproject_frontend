@@ -38,6 +38,7 @@
 }
 
 .error {
+
   color: #543b39;
   margin: 5px;
   font-size: 1rem;
@@ -46,6 +47,7 @@
 
 .errormsg {
   text-align: center;
+
 }
 
 .label {
@@ -63,10 +65,21 @@
   margin-bottom: 10px;
   font-size: 1.5rem;
 }
+.temperament {
+	font-size: small;
+	color: #543b39;
+	display: none;
+}
 
 @media screen and (min-width: 768px) {
-  .select {
-    width: 200px;
-    font-size: 1rem;
-  }
+
+	.select {
+		width: 200px;
+		font-size: 1rem;
+	}
+
+	.temperament {
+		display: inline;
+	}
+
 }

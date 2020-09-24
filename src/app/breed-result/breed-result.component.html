@@ -8,6 +8,9 @@
       <legend class="legend">
         Found {{ filteredBreeds.length }} breeds matching your criteria.
       </legend>
+      <p class="instructions" *ngIf="filteredBreeds.length > 0">
+        Please select the cats you're interested in seeing.
+      </p>
       <div class="scroll">
         <div *ngIf="filteredBreeds.length === 0" class="error">
           <p>

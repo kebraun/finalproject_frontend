@@ -1,84 +1,85 @@
 .article {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 20px;
 }
 
 .container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .breed-section {
-	padding: 70px 0px 20px 0;
-	margin: 20px 0;
-	position: relative;
-	background-color: #eee8da;
+  padding: 70px 0px 20px 0;
+  margin: 20px 0;
+  position: relative;
+  background-color: #eee8da;
 }
 
 .scroll {
-	display: flex;
-	overflow-x: scroll;
+  display: flex;
+  overflow-x: scroll;
 }
 
 .breed-name {
-	position: absolute;
-	width: 100%;
-	text-align: center;
-	color: #fcfcf2;
-	top: 15px;
-	/* left: 50%;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #fcfcf2;
+  top: 15px;
+  /* left: 50%;
   transform: translateX(-50%); */
-	font-size: 2rem;
-	background-color: #e4883e;
-	/* padding: 3px; */
-	/* border-radius: 10px 10px 0 0; */
+  font-size: 2rem;
+  background-color: #e4883e;
+  /* padding: 3px; */
+  /* border-radius: 10px 10px 0 0; */
 }
 
 .error {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #543b39;
-	padding: 30px;
-	font-size: 1.5rem;
-	text-align: center;
+
+  color: #543b39;
+  margin: 5px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.errormsg {
+  text-align: center;
+
 }
 
 .label {
-	color: #e4883e;
-	font-weight: bolder;
-	font-size: 1.5rem;
+  color: #e4883e;
+  font-weight: bolder;
+  font-size: 1.5rem;
 }
 
 .select {
-	background-color: #997750;
-	color: #fcfcf2;
-	width: 100px;
-	padding: 5px;
-	border-radius: 5px;
-	margin-bottom: 10px;
-	font-size: 1.5rem;
+  background-color: #997750;
+  color: #fcfcf2;
+  width: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
 }
-.noCatsMsg {
-	margin: 5px;
-	font-size: 14px;
-}
-.temerament {
+.temperament {
 	font-size: small;
 	color: #543b39;
 	display: none;
 }
 
 @media screen and (min-width: 768px) {
+
 	.select {
 		width: 200px;
 		font-size: 1rem;
 	}
 
-	.temerament {
+	.temperament {
 		display: inline;
 	}
+
 }

@@ -48,14 +48,12 @@
     </article>
   </form>
 
-  <section
-    class="breed-section"
-    *ngFor="let item of breedCatsArrFiltered"
-  >
+  <section class="breed-section" *ngFor="let item of breedCatsArrFiltered">
     <div class="scroll">
-      <div class="breed-name">{{ item.breed }} <span class="temerament">({{item.breedTemperament}})</span></div>
-      <div class="error" *ngIf="!item.catsArray || item.catsArray.length ==0" class="noCatsMsg">
-        <p class="noCatsMsg">
+
+      <div class="breed-name">{{ item.breed }} <span class="temperament">({{item.breedTemperament}})</span></div>
+      <div class="error" *ngIf="!item.catsArray || item.catsArray.length ==0">
+       <p class="errormsg">
           Oh no! It looks like no cats of this breed are available right now.
           Please consider looking at another breed!
         </p>

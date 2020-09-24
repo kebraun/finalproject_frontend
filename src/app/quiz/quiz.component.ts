@@ -11,32 +11,14 @@ import { CatBreedDetailsService } from '../cat-breed-details.service';
 export class QuizComponent implements OnInit {
   catBreeds: any = [];
   allBreeds: any = [];
-  toRemove: any = [
-    'aege',
-    'bamb',
-    'cspa',
-    'ctif',
-    'chee',
-    'cypr',
-    'dons',
-    'lihu',
-    'khao',
-    'kuri',
-    'mala',
-    'pixi',
-    'sava',
-    'srex',
-  ];
   playfulness = '0';
   vocal = '0';
   shedding = '0';
   sociality = '0';
-  friendly = '0';
   intelligence = '0';
   showDivVoc = false;
   showDivShed = false;
   showDivSoc = false;
-  showDivFriend = false;
   showDivIntell = false;
 
   constructor(
@@ -144,10 +126,6 @@ export class QuizComponent implements OnInit {
 
   toggleDisplaySoc = () => {
     this.showDivSoc = !this.showDivSoc;
-  };
-
-  toggleDisplayFriend = () => {
-    this.showDivFriend = !this.showDivFriend;
   };
 
   toggleDisplayIntell = () => {

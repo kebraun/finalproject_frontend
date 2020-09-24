@@ -19,7 +19,7 @@
 }
 .questionDiv {
   width: 100vw;
-  height: 80vh;
+  height: 83vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -46,10 +46,6 @@
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 /* hide the browser's default radio button */
@@ -85,13 +81,41 @@
   color: #e4883e;
 }
 
-.button {
-  text-align: center;
-  width: 80%;
+.submit {
+  width: 100%;
+  background-color: #997750;
+  color: #fcfcf2;
+  border: none;
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 20px;
+  margin-left: 5px;
+  outline: none;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
 }
 
-.submit {
-  width: 94%;
+.submit:hover {
+  background-color: #e4883e;
+}
+
+.btn {
+  text-align: center;
+  width: 135px;
+  margin-left: 5px;
+  background-color: #997750;
+  color: #fcfcf2;
+  border: none;
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 20px;
+  outline: none;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+}
+
+.btn:hover {
+  background-color: #e4883e;
 }
 
 .hide {
@@ -100,6 +124,24 @@
 
 .orange {
   color: #e4883e;
+}
+
+.anchor {
+  font-size: 1.5rem;
+  padding: 5px;
+  margin: 5px;
+  color: #543b39;
+}
+
+.hide {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.back-next {
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -123,7 +165,7 @@
     margin-bottom: 25px;
   }
 
-  .button {
-    width: 30%;
+  .submit {
+    width: 54%;
   }
 }

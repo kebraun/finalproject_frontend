@@ -5,18 +5,19 @@
 <main class="main">
   <section class="left" *ngIf="catBio">
     <section class="cat-img">
-      <img *ngIf="catBio.primary_photo_cropped; else elseBlock"
+      <img
+        *ngIf="catBio.primary_photo_cropped; else elseBlock"
         src="{{ catBio?.primary_photo_cropped['medium'] }}"
         alt="picture of the cat"
         class="catPic"
       />
       <ng-template #elseBlock>
-      <img 
-        src="assets/images/placeholder2.jpg"
-        alt="placeholder as picture the cat is not available"
-        class="catPic"
-      />
-    </ng-template>
+        <img
+          src="assets/images/placeholder2.jpg"
+          alt="placeholder as picture the cat is not available"
+          class="catPic"
+        />
+      </ng-template>
     </section>
     <section class="cat-bio">
       <section class="title">
@@ -29,7 +30,6 @@
           </div>
           <div class="name">{{ catBio.name }}</div>
         </section>
-
       </section>
 
       <section class="breed-color-age">
@@ -52,9 +52,9 @@
       </section>
       <section class="description">
         <p>
-          {{ catBio.description}}
+          {{ catBio.description }}
+          <a href="{{ catBio.url }}" target="_blank" class="More"> More</a>
         </p>
-        <a href="{{ catBio.url}}" target="_blank" class="More"> More</a>
       </section>
       <section class="attributes">
         <section class="goodWithContainer">
@@ -104,7 +104,7 @@
     </div>
     <div class="contacts">
       <i class="fas fa-map-marker-alt"></i>
-      
+
       {{ orgInfo.address.city }}, {{ orgInfo.address.state }}
     </div>
   </section>

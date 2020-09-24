@@ -38,12 +38,14 @@
 }
 
 .error {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 30px;
-	font-size: 1.5rem;
-	text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #543b39;
+  padding: 30px;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .label {

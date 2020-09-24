@@ -1,7 +1,10 @@
 <main class="main">
   <i
     class="fas fa-heart"
-    [ngClass]="{ favorite: favoriteFlag || catRef.isFavorite , is_animating: isClicked}"
+    [ngClass]="{
+      favorite: favoriteFlag || catRef.isFavorite,
+      is_animating: isClicked
+    }"
     (click)="handleHeartClick(catRef.id)"
   ></i>
   <div
@@ -18,7 +21,9 @@
         />
       </div>
       <div class="info">
-        <p class="name">{{ catRef.name }}</p>
+        <p class="name" [ngClass]="{ small: catRef.name.length > 45 }">
+          {{ catRef.name }}
+        </p>
       </div>
     </li>
   </div>

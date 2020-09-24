@@ -66,7 +66,7 @@
             </label>
           </section>
         </div>
-        <div class="button" (click)="toggleDisplayVoc()">Next</div>
+        <div class="btn" (click)="toggleDisplayVoc()">Next</div>
       </div>
 
       <!-- vocalization -->
@@ -129,7 +129,10 @@
             </label>
           </section>
         </div>
-        <div class="button" (click)="toggleDisplayShed()">Next</div>
+        <div class="back-next">
+          <div class="btn" (click)="toggleDisplayVoc()">Back</div>
+          <div class="btn" (click)="toggleDisplayShed()">Next</div>
+        </div>
       </div>
 
       <!-- shedding level -->
@@ -193,7 +196,10 @@
             </label>
           </section>
         </div>
-        <div class="button" (click)="toggleDisplaySoc()">Next</div>
+        <div class="back-next">
+          <div class="btn" (click)="toggleDisplayShed()">Back</div>
+          <div class="btn" (click)="toggleDisplaySoc()">Next</div>
+        </div>
       </div>
 
       <!-- social needs -->
@@ -240,7 +246,7 @@
                 [(ngModel)]="sociality"
               />
               <span class="checkmark"></span>
-              My cat spends half of their time with me, half of their time alone
+              My cat spends half of their time with me
             </label>
           </section>
           <section class="option">
@@ -257,7 +263,10 @@
             </label>
           </section>
         </div>
-        <div class="button" (click)="toggleDisplayIntell()">Next</div>
+        <div class="back-next">
+          <div class="btn" (click)="toggleDisplaySoc()">Back</div>
+          <div class="btn" (click)="toggleDisplayIntell()">Next</div>
+        </div>
       </div>
 
       <!-- ==intelligence -->
@@ -324,69 +333,11 @@
             >
           </section>
         </div>
-        <button class="button submit">Submit</button>
-      </div>
-      <!-- <div class="questionDiv" [ngClass]="{ hide: !showDivFriend }">
-        <legend class="legend">
-          Is your ideal cat <span class="orange">friendly</span> towards
-          strangers?
-        </legend>
-        <div class="qContainer">
-          <section class="option">
-            <label class="optionLabel" for="friendly1">
-              <input
-                type="radio"
-                id="friendly1"
-                name="friendly"
-                value="0"
-                [(ngModel)]="friendly"
-                checked
-              />
-              <span class="checkmark"></span>
-              No preference
-            </label>
-          </section>
-          <section class="option">
-            <label class="optionLabel" for="friendly2">
-              <input
-                type="radio"
-                id="friendly2"
-                name="friendly"
-                value="2"
-                [(ngModel)]="friendly"
-              />
-              <span class="checkmark"></span>
-              Stranger danger!
-            </label>
-          </section>
-          <section class="option">
-            <label class="optionLabel" for="friendly3">
-              <input
-                type="radio"
-                id="friendly3"
-                name="friendly"
-                value="3"
-                [(ngModel)]="friendly"
-              />
-              <span class="checkmark"></span>
-              They greet the occasional stranger
-            </label>
-          </section>
-          <section class="option">
-            <label class="optionLabel" for="friendly4">
-              <input
-                type="radio"
-                id="friendly4"
-                name="friendly"
-                value="4"
-                [(ngModel)]="friendly"
-              />
-              <span class="checkmark"></span>
-              Every stranger is a potential new friend
-            </label>
-          </section>
+        <div class="back-next">
+          <div class="btn" (click)="toggleDisplayIntell()">Back</div>
+          <button class="submit">Submit</button>
         </div>
-      </div> -->
+      </div>
     </div>
   </form>
 </main>

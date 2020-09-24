@@ -89,6 +89,11 @@ div {
 .fab {
   color: #0072b1;
 }
+
+.about-us {
+  text-align: center;
+}
+
 @media only screen and (min-width: 768px) {
   body,
   h1,
@@ -104,7 +109,7 @@ div {
   }
 
   .story {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     font-size: 20px;
     margin-left: 60px;
     margin-right: 60px;
@@ -118,11 +123,10 @@ div {
   .story-paragraph-end {
     font-style: italic;
     font-size: 20px;
-    padding-top: 40px;
   }
   .div-container {
     margin-bottom: 100px;
-    padding-top: 30px;
+    /* padding-top: 30px; */
     /* padding: 0 20px 0 20px; */
   }
   .about-us {
